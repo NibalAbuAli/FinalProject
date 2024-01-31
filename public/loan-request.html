@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/logo.jpeg" type="">
+
+  <title>طلب قرض تعليمي</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  
+
+</head>
+
+<style>
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-brand img {
+    width: 90px; 
+    height: auto; 
+    float: left;
+    border-radius: 50%;
+    margin-right:0 5px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    margin-inline-start: auto;
+  }
+
+  .container[loan-cont] {
+		
+    width: -450px;
+     background-color:#f7f6e3;
+     margin: 0 auto;
+     padding: 40px;
+     border: 1px solid #0f0e0e;
+     border-radius: 10px;
+     background-color: #05332cad;
+ }
+
+ #container {
+    display: flex;
+    flex-direction: row-reverse; /* تغيير الاتجاه إلى اليمين */
+    align-items: center;
+}
+
+label, select {
+    margin: 5px;
+}
+ label {
+     display: block;
+     margin-top: 10px;
+     margin-right: 10px;
+ }
+ input, textarea {
+     width: 100%;
+     padding: 10px;
+     margin-top: 5px;
+     margin-bottom: 15px;
+     border: 1px solid #0e0d0d;
+     box-sizing:border-box;
+     font-weight: bold;
+     border-radius: 2px;
+ }
+ button[type="submit"]{
+     background-color: cadetblue;
+     padding: 10px;
+     font-size: 18px;
+     cursor: pointer;
+     }
+     input[type="text"],textarea{
+         direction: rtl;
+         }
+     
+
+ button {
+     background-color: #007BFF;
+     color: #fff;
+     padding: 10px 20px;
+     border: none;
+     cursor: pointer;
+ }
+ p{
+     
+     font-weight: bold;
+     font-family: 'Segoe UI', sans-serif;
+     color: 3px rgba(10, 70, 80, 0.6);
+     margin-right: 10px;
+     position: relative;
+     text-align:right;
+     text-shadow: 0 0 rgb(255, 255, 255);
+     transition: all .5s ease-in-out;
+     cursor:pointer;
+     user-select:none;
+     }
+     table {
+         width: 100%;
+         margin-top: 20px;
+     }
+
+     th, td {
+         text-align: center;
+         padding: 8px;
+         border-radius:10px
+     }
+
+     th {
+         background-color: #007bff7c;
+     }
+     
+
+</style>
+<script>
+    function toggleServicesField() {
+        // استرجاع العنصر select
+        var servicesSelect = document.getElementById("services_history");
+        // استرجاع العنصر input
+        var servicesInput = document.getElementById("received_services");
+
+        // إذا كان الاختيار هو "نعم"
+        if (servicesSelect.value === "yes") {
+            // قم بإزالة الخاصية hidden
+            servicesInput.removeAttribute("hidden");
+        } else {
+            // إلا، قم بإضافة الخاصية hidden
+            servicesInput.setAttribute("hidden", "true");
+        }
+    }
+
+    function submitLoanForm() {
+        var member_id = document.getElementById('member_id').value;
+
+
+        fetch('/submit_loan_request', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ member_id: member_id,
+                full_name:full_name,
+                mobile:mobile,
+                student_name_1:student_name,
+                 university_1:university,
+                  major_1:major,
+                   gpa_1:gpa,
+                   academic_level_1:academic_level,
+                   semester_fee_1:semester_fee,
+                   notes_1:notes,
+                student_name_2:student_name, 
+                university_2:university, 
+                major_2:major, 
+                gpa_2:gpa,
+                academic_level_2:academic_level,
+                semester_fee_2:semester_fee,
+                notes_2:notes,
+                student_name_3:student_name,
+                 university_3:university,
+                  major_3:major, 
+                  gpa_3:gpa,
+                  academic_level_3:academic_level,
+                  semester_fee_3:semester_fee,
+                  notes_3:notes,
+                provider_name:provider_name,
+                provider_occupation:provider_occupation,
+                provider_phone:provider_phone,
+                family_size:family_size,
+                family_employees:family_employees,
+                monthly_income:monthly_income,
+                loan_amount:loan_amount,
+                services_history:services_history,
+                received_services:received_services
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Response:', data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+</script>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="images/hero3.jpg"  alt="">
+      </div>
+    </div>
+
+     <!-- header section strats -->
+     <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <!-- إضافة شعار الشركة -->
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.jpeg" alt="Halhul Co-operative Association Logo">
+            <span> Halhul Co-operative Association For High Education </span>
+          </a>
+    
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="service.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="why.html">Why Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="adminpage.html"> <i class="fa fa-user" aria-hidden="true"></i> back to admin Page</a>
+              </li>
+              
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+    <!-- end header section -->
+  </div>
+  </div>
+
+  <section>
+    <h2 style="
+        text-align: center;
+        font-size: 3em;
+        color:#063262c2;
+        margin-left: -10px;
+        margin-right: -10px;
+        padding-top: 20px;
+        animation: slideTop .5s ease forwards;
+        animation-delay: calc(.2s*var(--i));
+        font-weight: bold;
+    "> مرحبا بكم في صفحة طلب قرض تعليمي</h2>
+    <div class="container" id="loan-cont">
+        <h1 style="
+            text-align:center;
+            font-weight:bold;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:2em;
+            color:#fff;
+            margin-bottom:-10px;
+        "> طلب قرض تعليمي</h1>
+        <form autocomplete="off" action="/submit_loan_request" accept-charset="UTF-8" method="POST">
+            <input type="hidden" name="authenticity_token" value="h-4GCUjLHcfFMEkdxxYDspy5v6Y83g9-Ptlb9WYu2am_NU5bbkw87fLbjYObH9cJwIUgJN3m2w2l7Ago32HCMA" autocomplete="on">
+
+            <p>رقم العضوية <input type="number" id="member_id" name="member_id"></p>
+            <p>السادة / جمعية حلحول التعاونية للتعليم العالي المحترمين</p>
+            <p>أنا الموقع أدناه عضو الهيئة العامة للجمعيه: <input type="text" id="full_name" name="full_name"></p>
+            <p>و رقم جوالي <input type="number" id="mobile" name="mobile"></p>
+            <p>أتقدم بهذا الطلب للحصول على قرض تعليمي مسترد القيمة بدون عمولة حيث أن الوضع المالي لا يسمح بدفع الأقساط الجامعية لهذا الفصل الدراسي والمستفيدين من القرض هم حسب الجدول التالي:</p>
+
+            <table>
+                <tr>
+                    <th>ملاحظات</th>
+                    <th>القسط الفصلي</th>
+                    <th>المستوى الجامعي</th>
+                    <th>المعدل التراكمي</th>
+                    <th>التخصص</th>
+                    <th>الجامعة</th>
+                    <th>اسم الطالب</th>
+                    <th>الرقم</th>
+                </tr>
+                <tr>
+                    <td><input type="text" id="notes_1" name="notes_1"></td>
+                    <td><input type="number" id="semester_fee_1" name="semester_fee_1"></td>
+                    <td><input type="text" id="academic_level_1" name="academic_level_1"></td>
+                    <td><input type="number" id="gpa_1" name="gpa_1"></td>
+                    <td><input type="text" id="major_1" name="major_1"></td>
+                    <td><input type="text" id="university_1" name="university_1"></td>
+                    <td><input type="text" id="student_name_1" name="student_name_1"></td>
+                    <td style="background-color: #007bff5c;  border-radius:10px">1</td>
+                </tr>
+                <tr>  
+                    <td><input type="text" id="notes_2" name="notes_2"></td>
+                    <td><input type="number" id="semester_fee_2" name="semester_fee_2"></td>
+                    <td><input type="text" id="academic_level_2" name="academic_level_2"></td>
+                    <td><input type="number" id="gpa_2" name="gpa_2"></td>
+                    <td><input type="text" id="major_2" name="major_2"></td>
+                    <td><input type="text" id="university_2" name="university_2"></td>
+                    <td><input type="text" id="student_name_2" name="student_name_2"></td>
+                    <td style="background-color: #007bff5c;  border-radius:10px">2</td>
+                </tr>
+                <tr> 
+                    <td><input type="text" id="notes_3" name="notes_3"></td>
+                    <td><input type="number" id="semester_fee_3" name="semester_fee_3"></td>
+                    <td><input type="text" id="academic_level_3" name="academic_level_3"></td>
+                    <td><input type="number" id="gpa_3" name="gpa_3"></td>
+                    <td><input type="text" id="major_3" name="major_3"></td>
+                    <td><input type="text" id="university_3" name="university_3"></td>
+                    <td><input type="text" id="student_name_3" name="student_name_3"></td>
+                    <td style="background-color: #007bff5c;  border-radius:10px">3</td>
+                </tr>
+            </table>
+
+            <p>المُعيل <input type="text" id="provider_name" name="provider_name"></p>
+            <p>عمله <input type="text" id="provider_occupation" name="provider_occupation"></p>
+            <p>رقم الهاتف أو النقال<input type="number" id="provider_phone" name="provider_phone"></p>
+            <p>عدد أفراد الأسرة <input type="number" id="family_size" name="family_size"></p>
+            <p>عدد العاملين في الأسرة <input type="number" id="family_employees" name="family_employees"></p>
+            <p>الدخل الشهري <input type="number" id="monthly_income" name="monthly_income"></p>
+            <p>موعد صرف القرض: (شهر 1- شهر 8)</p>
+            <p>المبلغ المطلوب (الحد الأعلى 500 دينار): <input type="number" id="loan_amount" name="loan_amount"></p>
+            
+            <div id="container">
+        <label for="services_history">هل حصلت على خدمات من الجمعية في السنوات الماضية</label>
+        <select id="services_history" name="services_history" required onchange="toggleServicesField()">
+            <option value="yes">نعم</option>
+            <option value="no">لا</option> 
+        </select></div>
+            <p>(منحة, قرض, إعفاء, مساعدة): <input type="text" id="received_services" name="received_services"></p>
+            <button type="submit" id="submit_loan_request" onclick="submitLoanForm()">تقديم الطلب</button>
+        </form>
+    </div>
+</section>
+
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By HCAHA
+        
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>

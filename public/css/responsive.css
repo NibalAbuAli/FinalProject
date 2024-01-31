@@ -1,0 +1,194 @@
+@media (max-width: 1300px) {
+
+  /* Styles for screens up to 1300px wide */
+/* You can adjust font sizes, margins, or padding for general layout refinement */
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* Header styles for screens up to 1300px wide */
+#demo-header {
+  background-color: #333;
+  padding: 10px;
+}
+
+ul.selector {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+ul.selector li {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Styles for screens up to 1120px wide */
+/* You might want to adjust the layout, fonts, or other styles */
+.hero_area h1 {
+  font-size: 2rem;
+}
+
+.slider_section {
+  padding: 30px 0 60px 0;
+}
+
+.custom_nav-container .navbar-nav {
+  padding-top: 10px;
+}
+
+.custom_nav-container .navbar-nav .nav-item .nav-link {
+  padding: 5px 20px;
+  margin: 5px 0;
+}
+
+/* Add more specific styles as needed for your design */
+
+}
+/* Default styles for larger screens */
+/* Add your default styles for larger screens here */
+
+@media (max-width: 1300px) {
+  /* Styles for screens up to 1300px wide */
+  /* Add styles here */
+}
+
+@media (max-width: 1120px) {
+  /* Styles for screens up to 1120px wide */
+  /* Add styles here */
+}
+
+
+/* Tablet styles */
+@media (min-width: 788px) and (max-width: 1040px) {
+  /* Change the font size for .hero_area h1 */
+  .hero_area h1 {
+    font-size: 2rem;
+  }
+
+  /* Change the padding for .slider_section */
+  .slider_section {
+    padding: 50px 0;
+  }
+
+  /* Change the padding for .custom_nav-container .navbar-nav .nav-item .nav-link */
+  .custom_nav-container .navbar-nav .nav-item .nav-link {
+    padding: 8px 25px;
+  }
+
+  /* Add more styles as needed */
+}
+@media (max-width: 992px) {
+  /* Styles for screens up to 992px wide */
+  .hero_area {
+    min-height: auto;
+
+    /* Adjust the background */
+  }
+
+  .hero_area .hero_bg_box {
+    display: none;
+    background: linear-gradient(130deg, #2B7082, #2B7082);
+
+
+  }
+
+  .slider_section {
+    padding: 45px 0 75px 0;
+  }
+
+  .custom_nav-container .navbar-nav {
+    padding-top: 15px;
+    align-items: center;
+  }
+
+  .custom_nav-container .navbar-nav .nav-item .nav-link {
+    padding: 5px 25px;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Styles for screens up to 768px wide */
+  .about_section .img-box {
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Styles for screens up to 576px wide */
+  .header_section .header_top .contact_nav a span {
+    display: none;
+  }
+
+  .client_section .client_container {
+    width: 100%;
+  }
+
+  .client_section .box {
+    margin: 0;
+  }
+
+  .owl-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+  }
+
+  .client_section .owl-carousel .owl-nav .owl-prev,
+  .client_section .owl-carousel .owl-nav .owl-next {
+    position: unset;
+    margin: 0 2.5px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  /* Styles for screens up to 480px wide */
+  .slider_section .detail-box h1 {
+    font-size: 2rem;
+     
+  }
+
+  .track_section form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .track_section form input {
+    width: 100%;
+  }
+
+  .track_section form button {
+    padding: 10px 60px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  /* Styles for screens up to 420px wide */
+  .service_section .box {
+    flex-direction: column;
+  }
+
+  .service_section .box .img-box {
+    justify-content: flex-start;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 376px) {
+  /* Styles for screens up to 376px wide */
+  /* Add styles here */
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}

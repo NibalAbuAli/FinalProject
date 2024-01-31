@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>signin</title>
+    <script>
+      $(document).ready(function() {
+        $('ul.tabs li').click(function() {
+            var tab_id = $(this).attr('data-tab');
+            $('ul.tabs li').removeClass('current');
+            $('.form-content').removeClass('current');
+            $(this).addClass('current');
+            $("#" + tab_id).addClass('current');
+        });
+
+        // Handle the click on the "I am new here" link
+        $('ul.tabs li[data-tab="new"]').click(function() {
+            $('.form-content').removeClass('current');
+            $('#new').addClass('current');
+        });
+    });
+
+   
+    function validateForm() {
+      var username = document.getElementById('username').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+      var selectedValue = selectedOption.value;
+
+      // Send the selected value to the server using Fetch API
+      fetch('/submit-form-member', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ option: selectedValue }),
+      })
+      .then(response => response.json())
+      .then(data => {
+          console.log('Server response:', data);
+      })
+      .catch(error => {
+          console.error('Error:', error);
+      });
+  
+       {
+      console.log('Please select an option.');
+  }
+
+    
+      // Simple validation
+      if (!username || !email || !password || !userType) {
+        alert('All fields are required!');
+        return;
+      }
+
+      // Password validation (minimum 8 characters, at least one uppercase letter, one lowercase letter, and one number)
+      var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+      if (!passwordRegex.test(password)) {
+        alert('Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, and one number.');
+        return;
+      }
+
+      // Proceed to send the form data to your server using AJAX or other methods
+      console.log('Username:', username);
+      console.log('Email:', email);
+      console.log('Password:', password);
+      console.log('User Type:', userType);
+    }  
+
+    function validateForm2() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementsByName('password')[0].value;
+    
+      if (!username || !password) {
+        alert('Username and password cannot be empty');
+        return false; // Prevent form submission
+      }
+    
+      // Additional validation logic
+      if (password.length < 8) {
+        alert('Password must be at least 8 characters long');
+        return false; // Prevent form submission
+      }
+      var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+      if (!passwordRegex.test(password)) {
+        alert('Password must include at least one uppercase letter, one lowercase letter, and one digit');
+        return false; // Prevent form submission
+      }
+      return true; // Allow form submission
+
+
+      }
+   
+
+          
+    </script>
+    <body>
+      <div class="overlay"></div>
+      <div class="modal position">
+        <img src="images/logohcaha.png"  style="border-radius:5px" class="logo">
+        <div class="brand login-text">
+          <p style="color: black;">Sign in with your email or username</p>
+        <div class="form position">
+          <a href="loginpage.html"><button class="close">x</button></a>
+          <div class="form-inner">
+            <!-- Tabs-->
+            <div class="tabs">
+              <ul class="tabs">
+                <li class="current" data-tab="member">
+                  <a href="#member">I am a member</a>
+                </li>
+                <li data-tab="new">
+                  <a href="#new">I am new here</a>
+                </li>
+              </ul>
+              <!--Login Form -->
+              <div class="form-content current" id="member">
+                <form id="sign-in" action="/sign-in" method="POST">
+                  <input type="text" name="username" id="username" placeholder="USERNAME" class="field" required>
+                  <input type="password" name="password" placeholder="PASSWORD" class="field" required>
+                  <div class="clear"></div>
+                  <input type="checkbox" name="rmbrme" id="custom-check" class="check"><label for="custom-check" class="check-label secondary-text">Remember me</label><a href=""><span class="forgot secondary-text">Forgot password?</span></a>
+                  <button id="submit" name="sign-in-button" type="submit" class="flat-button signin"onclick="validateForm2()" >Log In</button>
+                </form>
+              </div>
+              <!--Registration form-->
+              <div class="form-content" id="new" >
+                <form id="reg" action="/submit-form" method="POST">
+                  <input type="text" name="username" id="username" placeholder="USERNAME" class="field" required>
+                  <input type="email" name="email" id="email" placeholder="EMAIL ADDRESS" class="field" required>
+                  <input type="password" name="password" id="password" placeholder="PASSWORD" class="field" required >
+                  <div class="form-group" name="select">
+                    <label>Select User Type</label>
+                  <select id="userType"  name="userType"  required=" ">
+                    <option  disabled selected> SELECT ONE</option>
+                    <option value="Member">Member</option>
+                    <option value="Donor">Donor</option>
+                    </select>
+  
+                  </div>
+
+                  <button id="submit" type="submit"  name="register-button" class="flat-button signin" onclick="validateForm()">Sign Up</button>
+                             </form>  
+                
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </body>
+</head>
+
+</html>

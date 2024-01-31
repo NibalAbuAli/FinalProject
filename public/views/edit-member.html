@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+   <title>Update Member </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container "  dir="ltr">
+            <!-- إضافة شعار الشركة -->
+            <a class="navbar-brand" href="index.html">
+              <img src="images/logo.jpeg" alt="Halhul Co-operative Association Logo">
+              <span>Halhul Co-operative Association For High Education</span>
+            </a>
+      
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="service.html">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="why.html">Why Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="team.html">Team</a>
+                </li>
+                <li class="nav-item" id="logout-btn">
+                 <button class="logout-btn" onclick="document.location='login.html'">Logout</button>
+                </li>
+                <form class="form-inline">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+    
+<h2>تحرير العضو</h2>
+
+<form action="/update-member/:id" method="POST">
+    <label for="membership_id">رقم العضوية:</label>
+    <input type="number" id="membership_id" name="membership_id" value="<%= member.membership_id %>" required>
+  
+    <label for="member_name">الاسم الرباعي:</label>
+    <input type="text" id="member_name" name="member_name" value="<%= member.member_name %>" required>
+  
+    <label for="birthdate">تاريخ الولادة:</label>
+    <input type="date" id="birthdate" name="birthdate" value="<%= member.birthdate %>" required>
+  
+    <label for="address">العنوان:</label>
+    <input type="text" id="address" name="address" value="<%= member.address %>" required>
+  
+    <label for="qualification">المؤهل العلمي:</label>
+    <input type="text" id="qualification" name="qualification" value="<%= member.qualification %>" required>
+  
+    <label for="college_name">اسم المعهد أو الجامعة:</label>
+    <input type="text" id="college_name" name="college_name" value="<%= member.college_name %>" required>
+  
+    <label for="college_year">سنة التخرج:</label>
+    <input type="year" id="college_year" name="college_year" value="<%= member.college_year %>" required>
+  
+    <label for="specialization">التخصص:</label>
+    <input type="text" id="specialization" name="specialization" value="<%= member.specialization %>" required>
+  
+    <label for="nationality">الجنسية:</label>
+    <input type="text" id="nationality" name="nationality" value="<%= member.nationality %>" required>
+  
+    <label for="member_id">رقم الهوية:</label>
+    <input type="number" id="member_id" name="member_id" value="<%= member.member_id %>" required>
+  
+    <label for="marital_status">الحالة الاجتماعية:</label>
+    <select id="marital_status" name="marital_status" required>
+      <option  value="<%= member.marital_status === 'متزوج' ? 'selected' : '' %>">متزوج</option>
+      <option value="<%= member.marital_status === 'أعزب' ? 'selected' : '' %>">أعزب</option>
+    </select>
+  
+    <label for="phone">رقم الهاتف:</label>
+    <input type="number" id="phone" name="phone" value="<%= member.phone %>" required>
+  
+    <label for="gender">الجنس:</label>
+    <select id="gender" name="gender" required>
+      <option value=" <%= member.gender === 'ذكر' ? 'selected' : '' %>">ذكر</option>
+      <option value=" <%= member.gender === 'أنثى' ? 'selected' : '' %>">أنثى</option>
+      <!-- يمكنك إضافة المزيد من الخيارات حسب الحاجة -->
+    </select>
+  
+    <label for="career">المهنة:</label>
+    <input type="text" id="career" name="career" value="<%= member.career %>" required>
+  
+    <label for="career_address">مكان العمل:</label>
+    <input type="text" id="career_address" name="career_address" value="<%= member.career_address %>" required>
+  
+    <label for="membership_date">تاريخ الانضمام للعضوية:</label>
+    <input type="date" id="membership_date" name="membership_date" value="<%= member.membership_date %>" required>
+  
+    <label for="is_active">الحالة:</label>
+    <select id="is_active" name="is_active" required>
+      <option value="<%= member.is_active === 1 ? 'selected' : '' %>">نشط</option>
+      <option value=" <%= member.is_active === 0 ? 'selected' : '' %>">غير نشط</option>
+    </select>  
+    <button type="submit">تحديث</button>
+  </form>
+  
+
+</body>
+</html>
