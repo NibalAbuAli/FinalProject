@@ -91,6 +91,7 @@
 
   <link rel="manifest" href="/manifest.json" />
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
  
 
   <title>Member Page</title>
@@ -98,6 +99,7 @@
 
 <body>
   <style>
+    
     /* أسلوب بسيط لتحسين التصميم */
     .logout-btn {
       background-color: cadetblue;
@@ -217,6 +219,7 @@
     .section6 {
       h2 {
         color: #007BFF;
+        font-family:"Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
       }
 
       form {
@@ -316,6 +319,125 @@
       -ms-flex-align: center;
       align-items: center;
     }
+
+    .repayment-section {
+      background-color: cadetblue;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .repayment-section h2 {
+      margin-top: 0;
+    }
+    
+    .repayment-section .form-group {
+      margin-bottom: 15px;
+    }
+    
+    .repayment-section label {
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+    
+    .repayment-section input[type="date"],
+    .repayment-section input[type="number"],
+    .repayment-section select,
+    .repayment-section textarea {
+      display: block;
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    
+    .repayment-section textarea {
+      resize: vertical;
+    }
+    
+    .repayment-section .actions {
+      text-align: center;
+    }
+    
+    .repayment-section button[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .repayment-section button[type="submit"]:hover {
+      background-color: #0062cc;
+    }
+    .card {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 0.25rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    
+    .card-header {
+      padding: 1rem;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #e0e0e0;
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+    }
+    
+    .card-body {
+      padding: 1rem;
+    }
+    
+    .form-control {
+      margin-bottom: 1rem;
+    }
+    
+    .btn {
+      margin-right: 1rem;
+    }
+
+    #studentForm1 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      grid-auto-flow: dense;
+      direction: rtl;
+    }
+
+    #studentForm1 label {
+      grid-column: 2 / 3;
+      justify-self: end;
+      direction: rtl;
+    }
+     
+    #studentForm1 input[type="text"],
+    #studentForm1 input[type="email"],
+    #studentForm1 input[type="number"],
+    #studentForm1 input[type="tel"],
+    #studentForm1 select
+    {
+      grid-column: 1 / 2;
+      border-radius: 10px;
+      border-color: rgba(13, 39, 67, 0.986);
+      direction: rtl;
+    }
+
+    #studentForm1 button[type="submit"] {
+      grid-column: 1 / 3;
+      align-self: end;
+      background-color: rgba(13, 39, 67, 0.986);
+      border-radius: 10px;
+      color: #fff;
+     
+    }
+
   </style>
 
 
@@ -356,48 +478,465 @@
             <li class="nav-item" id="logout-btn">
               <button class="logout-btn" id="logoutButton" onclick="logout()">Logout</button>
             </li>
-            <form class="form-inline">
-              <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-            </form>
+            
           </ul>
         </div>
       </nav>
     </div>
   </header>
-   
+  <div class="container container-fluid main-content-box">
+    <p class="alert alert-info">مرحباً! لقد قمت بالتسجيل بنجاح.</p>
 
-    <div class="container container-fluid main-content-box"> 
-      <p class="alert alert-info">مرحباً! لقد قمت بالتسجيل بنجاح.</p>
-    <h1 class="page-title website_title"
-      style="margin-top:5%; margin-right:-3%;color:rgb(6, 77, 77); font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
-      صفحة أعضاء جمعية حلحول التعاونية للتعليم العالي</h1>
-    <br>
+    <h1 class="page-title website_title" style="margin-top:5%; margin-right:-3%;color:rgb(6, 77, 77); font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+        صفحة أعضاء جمعية حلحول التعاونية للتعليم العالي</h1>
+      <nav>
+        <ul>
+            <li><a href="#memberInfo">عرض بياناتي</a></li>
+            <li><a href="#membership-requests"> طلب الانتساب</a></li>
+            <li><a href="memberloan-request.html"> طلب قرض تعليمي</a></li>
+            <li><a href="#Cancellation-of-membership"> الغاء العضوية</a></li>
+            <li><a href="#studentForm">تسجيل طالب</a></li>
+            <li><a href="#viewStudents">عرض بيانات الطالب</a></li>
+          
+            
+        </ul>
+    </nav>
+
     
-<main>
-  <h1>Members List</h1>
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Membership ID</th>
-        <th>Full Name</th>
-        <!-- ... (أضف أعمدة إضافية حسب احتياجك) -->
-      </tr>
-    </thead>
-    <tbody>
-      <% members.forEach(member => { %>
-        <tr>
-          <td><%= member.membership_id %></td>
-          <td><%= member.member_name %></td>
-          <!-- ... (أعمدة إضافية) -->
-          <td><a href="/edit-member/<%= member.id %>">تعديل</a></td>
-          <td><a href="#" onclick="deleteMember('<%= member.id %>')">حذف</a></td>
+    <section id="memberInfo">
+      <div class="card">
+        <div class="card-header">   
+          <h2 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">عرض بياناتي</h2>
+          <form autocomplete="off" accept-charset="UTF-8" action="/viewMember" method="GET">
+            <div class="form-group">
+            <label for="member_id"><span style="color:red;">*</span>رقم الهوية الخاص بك</label>
+            <input class="form-control" autofocus="autofocus" required="required" placeholder="رقم الهوية"
+              type="text" name="member_id" id="member_id" style="direction: rtl;">
+          </div>
+          <div class="form-group">
+            <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+              data-disable-with=" عرض بيانات العضو" style="background-color: rgb(6, 77, 77);">
+              <span style="color:red;">*</span> عرض بيانات العضو
+            </button>
+          </div>
+        </form>    
+        </div>
+      </div>
+    </section>
 
-        </tr>
-      <% }); %>
-    </tbody>
-  </table>
-</main>
+
+        <section id="membership-requests">
+          <div class="card">
+            <div class="card-header">   
+          <h2 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">بيانات طلب الانتساب</h2>
+          <form autocomplete="off" accept-charset="UTF-8" method="POST" id="dataForm1" action="/dataForm1">
+            <div class="form-group">
+                <label for="member_name"><span style="color:red;">*</span>الاسم الرباعي </label>
+                <input placeholder="FullName" class="form-control" type="text" name="member_name" id="member_name" style="direction: rtl;" required pattern="[أ-ي\s]+" title="يجب أن يحتوي الحقل على نص عربي فقط">
+            </div>
+            
+            <div class="form-group">
+                <label for="member_Birthdate"> <span style="color:red;">*</span>تاريخ الولادة </label>
+                <input class="form-control" placeholder="Birthdate" type="date" name="member_Birthdate" id="member_Birthdate" required min="1900-01-01" max="<%= todayDate %>">
+                <small id="dateHelp" class="form-text text-muted">تاريخ الولادة يجب ألا يكون في المستقبل.</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="member_Birthaddress"> <span style="color:red;">*</span>مولود في</label>
+                <input class="form-control" placeholder="Birth Address" type="text" name="member_Birthaddress" id="member_Birthaddress" style="direction: rtl;" required pattern="[أ-ي\s]+" title="يجب أن يحتوي الحقل على نص عربي فقط">
+            </div>
+            
+            <div class="form-group">
+                <label for="member_address"><span style="color:red;">*</span> العنوان</label>
+                <input class="form-control" placeholder="Adress" type="text" name="member_address" id="member_address" style="direction: rtl;" required pattern="[أ-ي\s]+" title="يجب أن يحتوي الحقل على نص عربي فقط">
+            </div>
+            
+            <div class="form-group">
+                <label for="member_Qualification"><span style="color:red;">*</span>المؤهل العلمي</label>
+                <input class="form-control" placeholder=" Qualification " type="text" name="member_Qualification" id="member_Qualification" style="direction: rtl;" required pattern="(بكالوريوس|ماجستير|دكتوراه)" title="يجب أن يحتوي الحقل على بكالوريوس أو ماجستير أو دكتوراه فقط">
+              </div>
+            
+            <div class="form-group">
+                <label for="member_CollegeName"> <span style="color:red;">*</span>اسم المعهد/الجامعة</label>
+                <input class="form-control" placeholder=" CollegeName" type="text" name="member_CollegeName" id="member_CollegeName" style="direction: rtl;" required pattern="[أ-ي\s]+" title="يجب أن يحتوي الحقل على نص عربي فقط">
+            </div>
+            
+            <div class="form-group">
+                <label for="member_CollegeYear"> <span style="color:red;">*</span>سنةالتخرج</label>
+                <input class="form-control" placeholder="CollegeYear " type="number" name="member_CollegeYear" id="member_CollegeYear" style="direction: rtl;" required min="1900" max="<%= currentYear %>">
+            </div>
+            
+            <div class="form-group">
+                <label for="member_Specialization"> <span style="color:red;">*</span>التخصص</label>
+                <input class="form-control" placeholder="Specialization" type="text" name="member_Specialization" id="member_Specialization" style="direction: rtl;" required pattern="[أ-ي\s]+" title="يجب أن يحتوي الحقل على نص عربي فقط">
+            </div>
+            
+            <div class="form-group">
+                <label for="member_Nationality"> <span style="color:red;">*</span>الجنسية</label>
+                <input class="form-control" placeholder=" Nationality" type="text" name="member_Nationality" id="member_Nationality" style="direction: rtl;" required pattern="[أ-ي\s]+" title="يجب أن يحتوي الحقل على نص عربي فقط">
+            </div>
+            
+            <div class="form-group">
+                <label for="member_MemberID"> <span style="color:red;">*</span>رقم الهوية </label>
+                <input class="form-control" placeholder=" MemberID" type="number" name="member_MemberID" id="member_MemberID" style="direction: rtl;" required min="1" max="9999999999">
+            </div>
+            
+            <div class="form-group">
+                <select id="MaterialStatus" name="MaterialStatus" required>
+                    <option value="Married">متزوج/ة</option>
+                    <option value="Single">أعزب/عزباء</option>
+                    <option value="Divorced">مطلق/ة </option>
+                    <option value="Widowed">غير ذلك</option>
+                </select>
+                <label for="MaterialStatus"> <span style="color:red;">*</span>الحالةالاجتماعية</label>
+            </div>
+            
+            <div class="form-group">
+                <label><input type="radio" id="Male" name="Gender" value="Male">ذكر</label>
+                <label><input type="radio" id="Female" name="Gender" value="Female">أنثى</label> 
+                <label for="Gender"> <span style="color:red;">*</span>الجنس</label>
+            </div>
+            
+            <div class="form-group">
+                <label for="PhoneNumber"> <span style="color:red;">*</span>رقم الهاتف</label>
+                <input class="form-control" placeholder="PhoneNumber " type="number" name="PhoneNumber" id="PhoneNumber" style="direction: rtl;" required pattern="[0-9]{10}">
+            </div>
+            
+            <div class="form-group">
+                <label for="CurrentCareer"> <span style="color:red;">*</span>المهنة</label>
+                <input class="form-control" placeholder="CurrentCareer" type="text" id="CurrentCareer" name="CurrentCareer" required pattern="[أ-ي\s]+" title="يجب أن يحتوي الحقل على نص عربي فقط">
+            </div>
+            
+            <div class="form-group">
+                <label for="CareerAddress"> <span style="color:red;">*</span>مكان العمل</label>
+                <input class="form-control" placeholder="CareerAddress" type="text" id="CareerAddress" name="CareerAddress" required pattern="[أ-ي\s]+" title="يجب أن يحتوي الحقل على نص عربي فقط">
+            </div>
+            
+            <div class="form-group">
+                <label for="MembershipDate"> <span style="color:red;">*</span>تاريخ الانضمام للعضوية</label>
+                <input class="form-control" placeholder="MembershipDate" type="date" id="MembershipDate" name="MembershipDate" required min="<%= todayDate %>" max="<%= todayDate %>">
+                <small id="dateHelp" class="form-text text-muted">تاريخ الانضمام للعضوية يجب ألا يكون في المستقبل.</small>
+            </div>
+            
+            <div class="form-group">
+                <input type="checkbox" value="1" name="is_active" id="memberis_active">
+                <label for="memberis_active">نشط</label>
+            </div>
+            
+            <div class="actions float-right">
+                <button type="submit" style="background-color: #083942; color: #fff; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">حفظ</button>   
+            </div>
+            <span style="color:red;">*</span> <span class="small"> يجب تعبئة المعلومات</span>
+        </form>
+     
+      </div>
+    </div>
+        </section>
+
+        <section id="Cancellation-of-membership">
+          <div class="card">
+            <div class="card-header">  
+            <h2 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">الغاء تنشيط العضوية</h2>
+            <form autocomplete="off" accept-charset="UTF-8" action="/cancelMember" method="GET">
+              <div class="form-group">
+              <label for="member_id"><span style="color:red;">*</span>رقم الهوية الخاص بك</label>
+              <input class="form-control" autofocus="autofocus" required="required" placeholder="رقم الهوية"
+                type="text" name="member_id" id="member_id" style="direction: rtl;">
+            </div>
+            <div class="form-group">
+              <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+                data-disable-with="إلغاء العضوية" style="background-color: rgb(6, 77, 77);">
+                <span style="color:red;">*</span>إلغاء العضوية
+              </button>
+            </div>
+          </form>    
+            </div>
+          </div> 
+        </section>
+
+      
+<section id="studentForm">
+  <div class="card">
+    <div class="card-header"> 
+  <h2 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">إضافة طالب </h2>
+  <form id="studentForm1" action="/studentForm1"  autocomplete="off" accept-charset="UTF-8" method="POST">
+    <div class="form-group">
+    <label for="student_name">اسم الطالب </label>
+    <input type="text" id="student_name" name="student_name"required pattern="[ا-ي-Z ]{1,50}">
+      </div>  
+      <div class="form-group">
+    <label for="member_name">اسم العضو الكفيل </label>
+    <input type="text" id="member_name" name="member_name" required pattern="[ا-ي-Z ]{1,50}">
+    </div>
+    <div class="form-group">
+    <label for="PhoneNumber">رقم الهاتف</label>
+    <input type="number" id="PhoneNumber" name="PhoneNumber"required pattern="[0-9]{8,15}">
+    </div>
+    <div class="form-group">
+    <label for="student_univ">الجامعة</label>
+    <input type="text" id="student_name_univ" name="student_univ" required pattern="[ا-ي-Z ]{1,50}">
+    </div>
+    <div class="form-group">
+    <label for="student_speci">التخصص</label>
+    <input type="text" id="student_speci" name="student_speci" required pattern="[ا-ي-Z ]{1,50}">
+    </div>
+    <div class="form-group">
+    <label for="CumulativeAverage">المعدل التراكمي</label>
+    <input type="number" id="CumulativeAverage" name="CumulativeAverage" required step="0.01" min="0" max="4">
+    </div>
+    <div class="form-group">
+    <label for="AcademicLevel">المستوى الجامعي</label>
+    <select id="AcademicLevel" name="AcademicLevel" required>
+    <option value="">اختر المستوى الجامعي</option>
+    <option value="Undergraduate">طالب</option>
+     <option value="Postgraduate">خريج</option>
+      </select>
+    </div>
+    <div class="form-group">
+    <label for="UniversityTuition">القسط الفصلي </label>
+    <input type="number" id="UniversityTuition" name="UniversityTuition" required inputmode="numeric" min="1" max="9999999999">
+    </div>
+    <div class="form-group">
+    <label for="note">ملاحظات</label>
+    <input type="text" id="note" name="note">  
+    </div>
+    
+    <button type="submit">حفظ</button>
+    </div>
+  </form>
+  <div class="card">
+    <div class="card-header"> 
+</section>
+
+        <section id="viewStudents">
+          <div class="card">
+            <div class="card-header">   
+          <h2 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">بيانات الطلاب الذين تكفلهم</h2>
+          <form autocomplete="off" accept-charset="UTF-8" action="/viewStudents" method="GET">
+            <div class="form-group">
+            <label for="member_name"><span style="color:red;">*</span> اسم العضو</label>
+            <input class="form-control" autofocus="autofocus" required="required" placeholder="اسم العضو"
+              type="text" name="member_name" id="member_name" style="direction: rtl;">
+          </div>
+          <div class="form-group">
+            <label for="student_id"><span style="color:red;">*</span> اسم الطالب</label>
+            <input class="form-control" autofocus="autofocus" required="required" placeholder="اسم الطالب"
+              type="text" name="student_id" id="student_id" style="direction: rtl;">
+          </div>
+          <div class="form-group">
+            <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+              data-disable-with=" استرجاع" style="background-color: rgb(6, 77, 77);">
+              <span style="color:red;">*</span> استرجاع
+            </button>
+          </div>
+        </form>    
+            </div>
+          </div>
+      </section> 
+        
+  
+</div>
+     
+
+<script>
+  async function submitMemberForm(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form values
+    const membershipId = document.getElementById("membership_id").value;
+    const memberName = document.getElementById("member_name").value;
+    const member_Birthdate = document.getElementById("member_Birthdate").value;
+    const birthAddress = document.getElementById("member_Birthaddress").value;
+    const member_Birthaddress = document.getElementById("member_address").value;
+    const member_Qualification = document.getElementById("member_Qualification").value;
+    const member_CollegeName = document.getElementById("member_CollegeName").value;
+    const member_CollegeYear = document.getElementById("member_CollegeYear").value;
+    const member_Specialization = document.getElementById("member_Specialization").value;
+    const member_Nationality = document.getElementById("member_Nationality").value;
+    const member_MemberID = document.getElementById("member_MemberID").value;
+    const MaterialStatus = document.getElementById("MaterialStatus").value;
+    const Gender = document.getElementById("Gender").value;
+    const member_phone = document.getElementById("member_phone").value;
+    const CurrentCareer = document.getElementById("CurrentCareer").value;
+    const CareerAddress = document.getElementById("CareerAddress").value;
+    const MembershipDate = document.getElementById("MembershipDate").value;
+    const memberis_active = document.getElementById("memberis_active").value;
+    // Add other form fields similarly
+
+    // Create a preview string
+    const preview = `
+      <h2>معلومات العضو</h2>
+      <p>رقم العضوية: ${membershipId}</p>
+      <p>الاسم الرباعي: ${memberName}</p>
+      <p>تاريخ الميلاد: ${memberName}</p>
+      <p>مكان الولادة : ${member_Birthdate}</p>
+      <p> العنوان: ${member_Birthaddress}</p>
+      <p>المؤهل العلمي: ${member_Qualification}</p>
+       <p>إسم الجامعةأو الكلية: ${member_CollegeName}</p> 
+          <p>سنةالتخرج: ${member_CollegeYear}</p>
+       <p> التخصص: ${member_Specialization}</p>
+      <p> الجنسية: ${member_Nationality}</p>
+      <p> رقم الهوية: ${member_MemberID}</p>
+      <p>الحالة الإجتماعية: ${MaterialStatus}</p>
+      <p> الجنس: ${Gender}</p>
+      <p> رقم الهاتف: ${member_phone}</p>
+      <p> المهنة: ${CurrentCareer}</p>
+      <p> مكان العمل: ${CareerAddress}</p>
+      <p> تاريخ العضوية: ${MembershipDate}</p>
+      <p>  نشط: ${memberis_active}</p>
+  
+    `;
+
+    // Update the preview div
+    document.getElementById('preview').innerHTML = preview;
+
+    // Clear the form fields
+    document.getElementById("membership_id").value = "";
+    document.getElementById("member_name").value = "";
+    document.getElementById("member_Birthdate").value = "";
+    document.getElementById("member_Birthaddress").value = "";
+    document.getElementById("member_address").value = "";
+    document.getElementById("member_Qualification").value = "";
+    document.getElementById("member_CollegeName").value="";
+    document.getElementById("member_CollegeYear").value="";
+    document.getElementById("member_Specialization").value="";
+     document.getElementById("member_Nationality").value="";
+     document.getElementById("member_MemberID").value="";
+     document.getElementById("MaterialStatus").value="";
+     document.getElementById("Gender").value="";
+     document.getElementById("member_phone").value="";
+     document.getElementById("CurrentCareer").value="";
+     document.getElementById("CareerAddress").value="";
+    document.getElementById("MembershipDate").value="";
+    document.getElementById("memberis_active").value="";
+    // Clear other fields similarly
+
+    // Save to Database
+    const formData = {
+      membershipId,
+      memberName,
+      birthdate,
+      birthAddress,
+      address,
+      qualification,
+      member_CollegeName,
+      member_CollegeYear,
+      member_Specialization,
+      member_Nationality,
+      member_MemberID,
+      MaterialStatus,
+      CurrentCareer,
+      CareerAddress,
+      MembershipDate,
+      memberis_active
+    };
+
+    try {
+      const response = await fetch('/saveToDatabase', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+
+      // Handle the result, you can show a success message or handle errors
+      console.log(result);
+    } catch (error) {
+      console.error('Error saving to database:', error);
+      // Handle the error, show an error message to the user
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Add an event listener to the logout button
+    document.getElementById('logoutButton').addEventListener('click', function () {
+        // Call the logout function
+        logout();
+    });
+});
+
+// Function to handle logout
+function logout() {
+    // Perform any logout logic here (e.g., clearing session, redirecting to login page, etc.)
+    console.log('User logged out');
+
+    // Redirect to the login page (replace 'login.html' with your actual login page)
+    window.location.href = 'loginpage.html';
+}
+
+// Handle loan repayment form submission
+const loanRepaymentForm = document.getElementById("loan-repayment-form");
+if (loanRepaymentForm) {
+  loanRepaymentForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Collect form data
+    const formData = new FormData(loanRepaymentForm);
+
+    // Send form data to the server
+    fetch("/submit-loan-repayment", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          // Show success message
+          alert("تم تسديد القرض بنجاح!");
+        } else {
+          // Show error message
+          alert("حدث خطأ!");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        // Show error message
+        alert("حدث خطأ!");
+      });
+  });
+}
+
+function cancelMembership(event) {
+  event.preventDefault(); // prevent the form from submitting normally
+
+  // get the membership ID and is_active value from the form
+  const cancelMembershipId = document.getElementById("cancelMembershipId").value;
+  const isActive = document.getElementById("is_active");
+
+  // check if the membership ID exists
+  if (!cancelMembershipId) {
+    alert("رقم العضوية غير صحيح. يرجى إدخال رقم صحيح.");
+    return;
+  }
+
+  // set the is_active value to 0
+  isActive.value = "0";
+
+  // send an HTTP request to the server to update the is_active column
+  fetch("/api/members/" + cancelMembershipId, { // replace with the actual URL for updating the membership
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      is_active: isActive.value,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      // handle success
+      alert("تم الغاء العضوية بنجاح. أنت غير نشط في العضوية الأن");
+      location.reload();
+    })
+    .catch((error) => {
+      // handle error
+      console.error(error);
+    });
+}
+</script>
 </body>
+
 </html>

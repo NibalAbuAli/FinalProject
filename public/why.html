@@ -11,7 +11,7 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/favicon.png" type="">
+  <link rel="shortcut icon" href="images/logo.jpeg" type="">
 
   <title>Halhul Co-operative Association For High Education</title>
 
@@ -52,16 +52,17 @@
 </style>
 <body class="sub_page">
 
-  <div class="hero_area">
+  <header id="demo-header">
+    <ul class="selector" onclick="changeView(event)">
+      <li class="active" data-width="" data-height="">Desktop</li>
+      <li class="selectable" data-width="1040px" data-height="768px" >Tablet</li>
+      <li class="selectable" data-width="788px" data-height="1000px">Tablet (Portrait)</li>
+      <li class="selectable" data-width="375px" data-height="568px">Mobile</li>
+    </ul>
+  </header>
 
-    <div class="hero_bg_box">
-      <div class="bg_img_box">
-        <img src="images/hero3.jpg"  alt="">
-      </div>
-    </div>
-
-     <!-- header section strats -->
-     <header class="header_section">
+    <!-- header section strats -->
+    <header class="header_section" style="background-color: #2B7082; ">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <!-- إضافة شعار الشركة -->
@@ -94,11 +95,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="loginpage.html"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
               </li>
-              <form class="form-inline">
-                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-              </form>
+              
             </ul>
           </div>
         </nav>

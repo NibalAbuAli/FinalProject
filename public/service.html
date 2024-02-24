@@ -54,16 +54,17 @@
 
 <body class="sub_page">
 
-  <div class="hero_area">
-
-    <div class="hero_bg_box">
-      <div class="bg_img_box">
-        <img src="images/hero3.jpg"  alt="">
-      </div>
-    </div>
+  <header id="demo-header">
+    <ul class="selector" onclick="changeView(event)">
+      <li class="active" data-width="" data-height="">Desktop</li>
+      <li class="selectable" data-width="1040px" data-height="768px" >Tablet</li>
+      <li class="selectable" data-width="788px" data-height="1000px">Tablet (Portrait)</li>
+      <li class="selectable" data-width="375px" data-height="568px">Mobile</li>
+    </ul>
+  </header>
 
      <!-- header section strats -->
-     <header class="header_section">
+     <header class="header_section" style="background-color: #2B7082;">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <!-- إضافة شعار الشركة -->
@@ -96,11 +97,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="loginpage.html"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
               </li>
-              <form class="form-inline">
-                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-              </form>
+              
             </ul>
           </div>
         </nav>
@@ -127,7 +124,7 @@
             <div class="col-md-4 ">
               <div class="box ">
                 <div class="img-box">
-                  <img src="images/s1.png" alt="">
+                  <img src="images/education.png" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -143,7 +140,7 @@
             <div class="col-md-4 ">
               <div class="box ">
                 <div class="img-box">
-                  <img src="images/s2.png" alt="">
+                  <img src="images/diploma_11023296.png" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -159,7 +156,7 @@
             <div class="col-md-4 ">
               <div class="box ">
                 <div class="img-box">
-                  <img src="images/s3.png" alt="">
+                  <img src="images/business_10098508.png" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -174,7 +171,7 @@
             </div>
           </div>
           <div class="btn-box">
-            <a href="">
+            <a href="https://www.whatsApp.com">
               Contact Us For More Info
             </a>
           </div>
@@ -206,7 +203,7 @@
                   Call +097 597 574 559
                 </span>
               </a>
-              <a href="">
+              <a href="https://www.whatsApp.com">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
                  HCAHA@gmail.com
@@ -265,12 +262,12 @@
         </div>
         <div class="col-md-6 col-lg-3 info_col ">
           <h4>
-            Subscribe
+            Contact
           </h4>
           <form action="#">
             <input type="text" placeholder="Enter email" />
             <button type="submit">
-              Subscribe
+              Contact
             </button>
           </form>
         </div>

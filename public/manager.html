@@ -315,6 +315,35 @@
       -ms-flex-align: center;
       align-items: center;
     }
+
+    .card {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 0.25rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    
+    .card-header {
+      padding: 1rem;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #e0e0e0;
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+    }
+    
+    .card-body {
+      padding: 1rem;
+    }
+    
+    .form-control {
+      margin-bottom: 1rem;
+    }
+    
+    .btn {
+      margin-right: 1rem;
+    }
+  
   </style>
 
 <script>
@@ -369,11 +398,7 @@ function logout() {
             <li class="nav-item" id="logout-btn">
               <button class="logout-btn" id="logoutButton" onclick="logout()">Logout</button>
             </li>
-            <form class="form-inline">
-              <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-            </form>
+            
           </ul>
         </div>
       </nav>
@@ -391,47 +416,119 @@ function logout() {
       
     <nav>
       <ul>
-        <li><a href="#loan-requests">Loan Requests</a></li>
-        <li><a href="#invoices">Invoices</a></li>
-        <li><a href="#reports">Reports</a></li>
+        <li><a href="managertoadminpage.html">الانتقال إلى صفحة المحاسبة</a></li>
+        <li><a href="#membership-requests">الموافقة على بيانات طلب الانتساب</a></li>
+        <li><a href="#loan-requests"> الموافقة على بيانات طلب قرض تعليمي </a></li>
+        <li><a href="#process_aid-requests"> الموافقة على بيانات طلب المساعدة </a></li>
+       
       </ul>
     </nav>
     <main>
+      
+      <section id="membership-requests">
+        <div class="card">
+          <div class="card-header">
+           <h2>طلبات العضوية</h2>
+          </div>
+          <div class="card-body">
+            
+            <form autocomplete="off" accept-charset="UTF-8" action="/acceptMember" method="GET">
+                <div class="form-group">
+                <label for="member_name"><span style="color:red;">*</span> اسم العضو</label>
+                <input class="form-control" autofocus="autofocus" required="required" placeholder="اسم العضو"
+                  type="text" name="member_name" id="member_name" style="direction: rtl;">
+              </div>
+              <div class="form-group">
+                <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+                  data-disable-with="الموافقة على العضوية" style="background-color: rgb(6, 77, 77);">
+                  <span style="color:red;">*</span> الموافقة على العضوية
+                </button>
+              </div>
+            </form>     
+            <form autocomplete="off" accept-charset="UTF-8" action="/searchallmembers" method="GET">
+              <div class="form-group">
+                <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+                  data-disable-with="استرجاع" style="background-color: rgb(6, 77, 77);">
+                  <span style="color:red;">*</span>  استرجاع جميع الأعضاء
+                </button>
+              </div>
+            </form>   
+          </div>
+        </div>
+      </section>
+      
       <section id="loan-requests">
-        <h2>Loan Requests</h2>
-
-
-        <!-- Loan request table goes here -->
-        <table>
-  <tbody>
-    <% loans.forEach(loan => { %>
-      <tr>
-        <td><%= loan.applicant %></td> 
-        <td><%= loan.amount %></td>
-        <td><%= loan.status %></td>
-      </tr>
-    <% }) %>
-  </tbody>
-</table>
-
+  <div class="card">
+          <div class="card-header">
+            <h2>طلبات القروض</h2>
+          </div>
+          <div class="card-body">
+            
+            <form autocomplete="off" accept-charset="UTF-8" action="/acceptLoans" method="GET">
+                <div class="form-group">
+                <label for="member_name"><span style="color:red;">*</span> اسم العضو</label>
+                <input class="form-control" autofocus="autofocus" required="required" placeholder="اسم العضو"
+                  type="text" name="member_name" id="member_name" style="direction: rtl;">
+              </div>
+              <div class="form-group">
+                <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+                  data-disable-with="الموافقة على العضوية" style="background-color: rgb(6, 77, 77);">
+                  <span style="color:red;">*</span> الموافقة على قرض تعليمي
+                </button>
+              </div>
+            </form>     
+            <form autocomplete="off" accept-charset="UTF-8" action="/searchallloans" method="GET">
+              <div class="form-group">
+                <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+                  data-disable-with="استرجاع" style="background-color: rgb(6, 77, 77);">
+                  <span style="color:red;">*</span>  استرجاع جميع بيانات طلبات القروض
+                </button>
+              </div>
+            </form> 
+            <form action="/searchloan-inv" id="searchpayment" method="GET">
+              <div class="form-group">
+                <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+                  data-disable-with="استرجاع" style="background-color: rgb(6, 77, 77);">
+                  <span style="color:red;">*</span>  استرجاع جميع فواتير القروض
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </section>
-      <section id="invoices">
-        <h2>Invoices</h2>
-        <!-- Invoice table goes here -->
-        <form action="/add_invoice" method="post"></form>
-        Applicant:<br>
-        <input type="text" name="applicant"><br>
-        Amount:<br>
-        <input type="number" step=".01" name="amount"><br>
-        Due Date (YYYY/MM/DD):<br>
-        <input type="date" name="due_date"><br><br>
-        <button type="submit">Add Invoice</button>
 
+      <section id="process_aid-requests">
+        <div class="card">
+          <div class="card-header">
+           <h2>طلبات المساعدات</h2>
+          </div>
+          <div class="card-body">
+            
+            <form autocomplete="off" accept-charset="UTF-8" action="/acceptprocess_aid" method="GET">
+                <div class="form-group">
+                <label for="member_name"><span style="color:red;">*</span> اسم العضو</label>
+                <input class="form-control" autofocus="autofocus" required="required" placeholder="اسم العضو"
+                  type="text" name="member_name" id="member_name" style="direction: rtl;">
+              </div>
+              <div class="form-group">
+                <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+                  data-disable-with="الموافقة على العضوية" style="background-color: rgb(6, 77, 77);">
+                  <span style="color:red;">*</span> الموافقة على طلب المساعدة
+                </button>
+              </div>
+            </form>     
+            <form autocomplete="off" accept-charset="UTF-8" action="/searchallaids" method="GET">
+              <div class="form-group">
+                <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+                  data-disable-with="استرجاع" style="background-color: rgb(6, 77, 77);">
+                  <span style="color:red;">*</span>  استرجاع بيانات المساعدات
+                </button>
+              </div>
+            </form>   
+          </div>
+        </div>
       </section>
-      <section id="reports">
-        <h2>Reports</h2>
-        <!-- Report table goes here -->
-      </section>
+      
  
     </div>
     <script src="/public/js/adminpage.js"></script>

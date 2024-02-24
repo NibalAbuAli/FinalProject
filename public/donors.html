@@ -2,6 +2,7 @@
 <html lang="ar">
 
 <head>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/adminpage.css">
@@ -52,6 +53,11 @@
   <meta name="author" content="" />
   <link rel="shortcut icon" href="images/logo.jpeg" type="">
   <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="CSS/donors.css" rel="stylesheet"/>
+
+ 
+
 
 
   <!-- bootstrap core css -->
@@ -91,6 +97,7 @@
 
   <link rel="manifest" href="/manifest.json" />
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <link href="css/style.scss" rel="stylesheet" />
 
   <title>Donors Page</title>
 </head>
@@ -315,13 +322,221 @@
       -ms-flex-align: center;
       align-items: center;
     }
+
+   
+    #formsection {
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(13, 39, 67, 0.986);
+      padding: 20px;
+      width: 400px;
+      text-align: center;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: row; /* Change from column to row */
+      justify-content: space-around; /* Adjust as needed */
+      align-items: center;
+      flex-wrap: wrap; /* Allow wrapping if the elements exceed the container width */
+    }
+    
+    label {
+      margin-top: 10px;
+      color: rgba(13, 39, 67, 0.986);
+    }
+    
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 5px;
+      box-sizing: border-box;
+    }
+    
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #preview {
+      margin-top: 20px;
+    }
+
+    h2, p {
+      color:rgba(13, 39, 67, 0.986);
+    }
+    .info_section p{
+      color: white;
+    }
+    .info_section {
+      background-color: rgba(13, 39, 67, 0.986);
+      color: #ffffff;
+      padding: 45px 0 15px 0;
+  }
+
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+.info_section h4 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.info_section .info_col {
+  margin-bottom: 30px;
+}
+
+.info_section .info_contact .contact_link_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.info_section .info_contact .contact_link_box a {
+  margin: 5px 0;
+  color: #ffffff;
+}
+
+.info_section .info_contact .contact_link_box a i {
+  margin-right: 5px;
+}
+
+.info_section .info_contact .contact_link_box a:hover {
+  color: #00bbf0;
+}
+
+.info_section .info_social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.info_section .info_social a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  border-radius: 100%;
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.info_section .info_social a:hover {
+  color: #00bbf0;
+}
+
+.info_section .info_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.info_section .info_links a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.info_section .info_links a:hover {
+  color: #00bbf0;
+}
+
+.info_section form input {
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background-color: transparent;
+  width: 100%;
+  height: 45px;
+  color: #ffffff;
+  outline: none;
+}
+
+.info_section form input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.info_section form input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.info_section form input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.info_section form input::placeholder {
+  color: #ffffff;
+}
+
+.info_section form button {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  padding: 10px 55px;
+  background-color: #00bbf0;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  margin-top: 15px;
+}
+
+.info_section form button:hover {
+  background-color: #007fa4;
+}
   </style>
 
 
 
 
 
-  <header class="header_section">
+  <header class="header_section" >
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg custom_nav-container " dir="ltr">
         <!-- إضافة شعار الشركة -->
@@ -355,11 +570,7 @@
             <li class="nav-item" id="logout-btn">
               <button class="logout-btn" id="logoutButton" onclick="logout()">Logout</button>
             </li>
-            <form class="form-inline">
-              <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-            </form>
+          
           </ul>
         </div>
       </nav>
@@ -369,44 +580,226 @@
 
     <div class="container container-fluid main-content-box"> 
       <p class="alert alert-info">مرحباً! لقد قمت بالتسجيل بنجاح.</p>
-    <h1 class="page-title website_title"
-      style="margin-top:5%; margin-right:-3%;color:rgb(6, 77, 77); font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
-      صفحة التبرع لجمعية حلحول التعاونية للتعليم العالي</h1>
+    
     <br>
     
-    <main>
-        <section class="donor-info">
-            <!-- Display donor information here -->
-            <h2>Donor Information</h2>
-            <p>Name: John Doe</p>
-            <p>Email: john@example.com</p>
-            <!-- Add more donor information as needed -->
-        </section>
-        <section class="donation-form">
-            <!-- Donation form -->
-            <h2>Make a Donation</h2>
-            <form action="/submit-donation" method="post">
-                <label for="amount">Donation Amount:</label>
-                <input type="number" name="amount" required>
-                <label for="frequency">Frequency (How Often Will You Be M
-                    onthly?):</label><br>
-                    <select id="frequency" name="frequency">
-                        <option value="One Time">One Time</option>
-                        <option value="Monthly">Every Month</option>
-                        <option value="Quarterly">Every Quarter</option>
-                        </select><br>
-                        <label for="date">Date of Donation:</label>
-                        <input type="date" name="date"><br>
-                        
+   
+      <section id="formsection">
+        <h1 
+      style="margin-top:5%; margin-right:-3%;color:rgb(6, 77, 77); font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+      نموذج التبرع لجمعية حلحول التعاونية للتعليم العالي</h1>
+        <form action="/submitDonation" method="POST" > 
+          <label for="name">Name:</label> <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label> <input type="email" id="email" name="email" required>
+          
+          <label for="donation_amount">Donation Amount:</label> <input type="number" id="donation_amount" name="donation_amount" step="0.01" required>
+          
+          <label for="donation_date">Donation Date:</label> <input type="date" id="donation_date" name="donation_date" required>
+          
+          <label for="donation_type">Donation Type:</label> 
+          <select id="donation_type" name="donation_type" required>
+          <option value="cash">Cash</option> 
+          <option value="check">Check</option>
+           <option value="credit">Credit Card</option>
+           </select>
+          <label for="donation_description">Donation Description:</label>
+           <input type="text" id="donation_description" name="donation_description">
+          
 
-                   
-                <!-- Add more donation form fields as needed -->
-                <button type="submit">Donate Now</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <!-- Add your footer content here -->
-    </footer>
+          <button type="button" onclick="submitDonation()">Submit</button>
+          <button type="button" onclick="saveToDatabase()">saveToDatabase</button>
+          
+          </form> 
+          <div id="preview">
+          </div>
+      </section>
+          </div>
+           <!-- info section -->
+  <section class="info_section layout_padding2" style="direction: ltr;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_contact">
+            <h4>
+              Address
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +097 597 574 559
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                 HCAHA@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_detail">
+            <h4>
+              Info
+            </h4> 
+            <p>
+              We are a non-profit organization that aims to assist university students in Halhul with their tuition fees for various studies. 
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>
+              Links
+            </h4>
+            <div class="info_links">
+              <a class="active" href="index.html">
+                Home
+              </a>
+              <a class="" href="about.html">
+                About
+              </a>
+              <a class="" href="service.html">
+                Services
+              </a>
+              <a class="" href="why.html">
+                Why Us
+              </a>
+              <a class="" href="team.html">
+                Team
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col ">
+          <h4>
+            Contact
+          </h4>
+          <form action="#">
+            <input type="text" placeholder="Enter email" />
+            <button type="submit">
+              Contact
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By HCAHA
+        
+      </p>
+    </div>
+  </section>
+
+           <script> 
+            function submitDonation() {
+             // Collect form data 
+             
+             const name = document.getElementById('name').value; 
+             const email = document.getElementById('email').value; 
+             const donationAmount = document.getElementById('donation_amount').value;
+              const donationDate = document.getElementById('donation_date').value; 
+              const donationType = document.getElementById('donation_type').value; 
+              const donationDescription = document.getElementById('donation_description').value;
+               
+          // Display donation information
+           const preview = `
+    <h2>معلومات التبرع</h2> 
+    <p>اسم المتبرع: ${name}</p> 
+    <p>البريد الإلكتروني: ${email}</p> 
+    <p>قيمة التبرع: ${donationAmount}</p> 
+    <p>تاريخ التبرع: ${donationDate}</p> 
+    <p>نوع التبرع: ${donationType}</p>
+     <p>وصف التبرع: ${donationDescription}</p>
+     
+      `;
+       document.getElementById('preview').innerHTML = preview;
+       } 
+       function saveToDatabase() {
+        const name = document.getElementById('name').value; 
+             const email = document.getElementById('email').value; 
+             const donationAmount = document.getElementById('donation_amount').value;
+              const donationDate = document.getElementById('donation_date').value; 
+              const donationType = document.getElementById('donation_type').value; 
+              const donationDescription = document.getElementById('donation_description').value;
+    
+        // Make an asynchronous request to save data in the database
+        fetch('/saveToDatabase', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'app/json',
+          },
+          body: JSON.stringify({
+            name: name,
+            email:email,
+            donation_amount:donationAmount,
+            donation_date : donationDate,
+            donation_type :donationType,
+           donation_description:donationDescription
+            
+
+          }),
+        })
+        .then(response => response.json())
+        .then(data => {
+          // Handle the response from the server (you can display a success message, etc.)
+          console.log(data);
+          alert('Data saved successfully!');
+        })
+        .catch(error => {
+          console.error('Error saving data:', error);
+          alert('Error saving data. Please try again.');
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        // Add an event listener to the logout button
+        document.getElementById('logoutButton').addEventListener('click', function () {
+            // Call the logout function
+            logout();
+        });
+    });
+    
+    // Function to handle logout
+    function logout() {
+        // Perform any logout logic here (e.g., clearing session, redirecting to login page, etc.)
+        console.log('User logged out');
+    
+        // Redirect to the login page (replace 'login.html' with your actual login page)
+        window.location.href = 'loginpage.html';
+        res.console('donors loged out');
+    }
+      </script>
 </body>
 </html>
+
+

@@ -261,27 +261,31 @@
       margin-top: 0;
       margin-bottom: rem;
     }
-    #managerForm {
+    #newInvoiceForm{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
       grid-auto-flow: dense;
     }
-    
-    #managerForm label {
+    #newInvoiceForm  label {
       grid-column: 2 / 3;
       justify-self: end;
     }
-    
-    #managerForm input[type="text"],
-    #managerForm input[type="email"] {
+
+    #newInvoiceForm input[type="text"],
+    #newInvoiceForm input[type="email"],
+    #newInvoiceForm input[type="number"],
+    #newInvoiceForm input[type="tel"],
+    #newInvoiceForm input[type="date"],
+    #newInvoiceForm select
+    {
       grid-column: 1 / 2;
       border-radius: 10px;
       border-color: rgba(13, 39, 67, 0.986);
       direction: rtl;
     }
-    
-    #managerForm button[type="submit"] {
+
+    #newInvoiceForm button[type="submit"]{
       grid-column: 1 / 3;
       align-self: end;
       background-color: rgba(13, 39, 67, 0.986);
@@ -289,6 +293,137 @@
       color: #fff;
      
     }
+    
+    
+    #managerForm  {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      grid-auto-flow: dense;
+    }
+    
+    
+    #managerForm  label {
+      grid-column: 2 / 3;
+      justify-self: end;
+    }
+    
+    #managerForm input[type="text"],
+    #managerForm input[type="email"] 
+    
+    {
+      grid-column: 1 / 2;
+      border-radius: 10px;
+      border-color: rgba(13, 39, 67, 0.986);
+      direction: rtl;
+    }
+    
+    #managerForm button[type="submit"]{
+      grid-column: 1 / 3;
+      align-self: end;
+      background-color: rgba(13, 39, 67, 0.986);
+      border-radius: 10px;
+      color: #fff;
+     
+    }
+
+    #studentForm1 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      grid-auto-flow: dense;
+    }
+
+    #studentForm1 label {
+      grid-column: 2 / 3;
+      justify-self: end;
+    }
+     
+    #studentForm1 input[type="text"],
+    #studentForm1 input[type="email"],
+    #studentForm1 input[type="number"],
+    #studentForm1 input[type="tel"],
+    #studentForm1 select
+    {
+      grid-column: 1 / 2;
+      border-radius: 10px;
+      border-color: rgba(13, 39, 67, 0.986);
+      direction: rtl;
+    }
+
+    #studentForm1 button[type="submit"] {
+      grid-column: 1 / 3;
+      align-self: end;
+      background-color: rgba(13, 39, 67, 0.986);
+      border-radius: 10px;
+      color: #fff;
+     
+    }
+
+    #fixed_asset_invoice{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      grid-auto-flow: dense;
+    }
+
+
+    #fixed_asset_invoice  label {
+      grid-column: 2 / 3;
+      justify-self: end;
+    }
+    
+    #fixed_asset_invoice input[type="text"],
+    #fixed_asset_invoice input[type="date"] ,
+    #fixed_asset_invoice input[type="number"] 
+    #fixed_asset_invoice textarea
+    {
+      grid-column: 1 / 2;
+      border-radius: 10px;
+      border-color: rgba(13, 39, 67, 0.986);
+      direction: rtl;
+    }
+    
+    #fixed_asset_invoice button[type="submit"]{
+      grid-column: 1 / 3;
+      align-self: end;
+      background-color: rgba(13, 39, 67, 0.986);
+      border-radius: 10px;
+      color: #fff;
+     
+    }
+    #stock_invoice{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      grid-auto-flow: dense;
+    }
+    
+    #stock_invoice  label {
+      grid-column: 2 / 3;
+      justify-self: end;
+    }
+    
+    #stock_invoice input[type="text"],
+    #stock_invoice input[type="date"] ,
+    #stock_invoice input[type="number"] 
+    #stock_invoice textarea
+    {
+      grid-column: 1 / 2;
+      border-radius: 10px;
+      border-color: rgba(13, 39, 67, 0.986);
+      direction: rtl;
+    }
+    
+    #stock_invoice button[type="submit"]{
+      grid-column: 1 / 3;
+      align-self: end;
+      background-color: rgba(13, 39, 67, 0.986);
+      border-radius: 10px;
+      color: #fff;
+     
+    }
+    
 
     .close {
       font-size: 25px;
@@ -302,6 +437,43 @@
       background-color: rgba(13, 39, 67, 0.986);
       outline: none;
     }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    
+    #payment-form {
+     display: flex; 
+     flex-direction: column;
+      max-width: 500px; margin: 0 auto; 
+      padding: 20px;
+       border: 1px solid #ccc;
+        border-radius: 5px; 
+      } 
+      label
+       {
+         margin-bottom: 5px; 
+         font-weight: bold; 
+        } 
+        input[type="date"], input[type="number"], select, textarea {
+           padding: 8px;
+            border-radius: 5px; border: 1px solid #ccc; 
+            margin-bottom: 10px;
+           } 
+    button[type="submit"] { 
+      background-color: #007bff; 
+      color: #fff; padding: 10px 20px;
+       border: none; border-radius: 5px; 
+       cursor: pointer; 
+    } 
+    button[type="submit"]:hover { 
+      background-color: #0069d9; 
+    } 
+
+
+    
   </style>
 
 
@@ -340,8 +512,6 @@
       } else {
         section.style.display = "none";
       }
-
-
 
     }
 
@@ -399,34 +569,7 @@
       operationsCell.innerHTML = '<button class="delete-button" onclick="deleteRow(this)">حذف</button>';
     }
 
-    function addStudent() {
-      var table = document.getElementById("studentTable");
-      var newRow = table.insertRow(table.rows.length);
-      var numberCell = newRow.insertCell(0);
-      var nameCell = newRow.insertCell(1);
-      var universityCell = newRow.insertCell(2);
-      var majorCell = newRow.insertCell(3);
-      var gpaCell = newRow.insertCell(4);
-      var academicLevelCell = newRow.insertCell(5);
-      var semesterFeeCell = newRow.insertCell(6);
-      var notesCell = newRow.insertCell(7);
-      var operationsCell = newRow.insertCell(8);
-
-      numberCell.innerHTML = table.rows.length;
-      nameCell.innerHTML = " ";
-      universityCell.innerHTML = " ";
-      majorCell.innerHTML = " ";
-      gpaCell.innerHTML = " ";
-      academicLevelCell.innerHTML = " ";
-      semesterFeeCell.innerHTML = " ";
-      notesCell.innerHTML = "";
-      operationsCell.innerHTML = '<button class="delete-button" onclick="deleteRow(this)">حذف</button>';
-    }
-    function deleteRow(button) {
-      var row = button.closest('tr');
-      row.parentNode.removeChild(row);
-    }
-
+     
 
     function submitForm() {
       var selectedOption = document.querySelector('input[name="options"]:checked');
@@ -496,42 +639,7 @@
       } else {
         console.log('Please select an option.');
       }
-
-      // Extract values from formData and update your table
-      const newRow = document.createElement('tr');
-
-      // Add cells with corresponding data
-      const columns = [
-        'membership[id]',
-        'member[member_name]',
-        'member[Birthdate]',
-        'member[address]',
-        'member[address]',
-        'member[Qualification]',
-        'member[CollegeName]',
-        'member[CollegeYear]',
-        'member[Specialization]',
-        'member[Nationality]',
-        'member[MemberID]',
-        'MaterialStatus',
-        'Gender',
-        'member[phone]',
-        'CurrentCareer',
-        'CareerAddress',
-        'MembershipDate',
-        'memberis_active'
-      ];
-
-      columns.forEach(column => {
-        const cell = document.createElement('td');
-        cell.textContent = formData.get(column);
-        newRow.appendChild(cell);
-      });
-
-      // Append the row to the table body
-      document.getElementById('dataBody1').appendChild(newRow);
     }
-
 
 
     function editRow(button) {
@@ -652,23 +760,6 @@
       row.parentNode.removeChild(row);
     }
 
-    document.getElementById('process_aid').addEventListener('submit', function (event) {
-      event.preventDefault();
-
-      var studentId = document.getElementById('student_id').value;
-      var memberId = document.getElementById('member_id').value;
-      var type = document.getElementById('type').value;
-      var quantity = document.getElementById('quantity').value;
-      var date = document.getElementById('date').value;
-
-      if (studentId && memberId && type && quantity && date) {
-        // If all required fields are filled, you can submit the form manually
-        this.submit();
-      } else {
-        // Display an error message or perform other actions based on your validation logic
-        alert('Please fill in all required fields.');
-      }
-    });
 
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -810,6 +901,113 @@ function saveEditedInvoice() {
   // إغلاق نافذة التحرير بعد حفظ التعديلات
   closeEditModal();
 }
+
+
+
+  document.getElementById('dataForm1').addEventListener('submit', function(event) {
+    // احصل على الحقول التي تحتاج إلى التحقق من صحة البيانات فيها
+    var nameField = document.getElementById('member_name');
+    var birthdateField = document.getElementById('member_Birthdate');
+    var birthaddressField = document.getElementById('member_Birthaddress');
+    var addressField = document.getElementById('member_address');
+    var collegeNameField = document.getElementById('member_CollegeName');
+    var collegeYearField = document.getElementById('member_CollegeYear');
+    var specializationField = document.getElementById('member_Specialization');
+    var nationalityField = document.getElementById('member_Nationality');
+    var memberIDField = document.getElementById('member_MemberID');
+    var phoneNumberField = document.getElementById('PhoneNumber');
+    var currentCareerField = document.getElementById('CurrentCareer');
+    var careerAddressField = document.getElementById('CareerAddress');
+    var membershipDateField = document.getElementById('MembershipDate');
+
+    // قم بالتحقق من صحة البيانات المدخلة في الحقول
+    if (!nameField.checkValidity()) {
+      nameField.setCustomValidity('يرجى إدخال اسم صحيح.');
+    } else {
+      nameField.setCustomValidity('');
+    }
+
+    if (!birthdateField.checkValidity()) {
+      birthdateField.setCustomValidity('يرجى إدخال تاريخ ولادة صحيح.');
+    } else {
+      birthdateField.setCustomValidity('');
+    }
+
+    if (!birthaddressField.checkValidity()) {
+      birthaddressField.setCustomValidity('يرجى إدخال مكان الميلاد صحيح.');
+    } else {
+      birthaddressField.setCustomValidity('');
+    }
+
+    if (!addressField.checkValidity()) {
+      addressField.setCustomValidity('يرجى إدخال عنوان صحيح.');
+    } else {
+      addressField.setCustomValidity('');
+    }
+
+    if (!collegeNameField.checkValidity()) {
+      collegeNameField.setCustomValidity('يرجى إدخال اسم الجامعة أو المعهد صحيح.');
+    } else {
+      collegeNameField.setCustomValidity('');
+    }
+
+    if (!collegeYearField.checkValidity()) {
+      collegeYearField.setCustomValidity('يرجى إدخال سنة التخرج صحيحة.');
+    } else {
+      collegeYearField.setCustomValidity('');
+    }
+
+    if (!specializationField.checkValidity()) {
+      specializationField.setCustomValidity('يرجى إدخال التخصص صحيح.');
+    } else {
+      specializationField.setCustomValidity('');
+    }
+
+    if (!nationalityField.checkValidity()) {
+      nationalityField.setCustomValidity('يرجى إدخال الجنسية صحيحة.');
+    } else {
+      nationalityField.setCustomValidity('');
+    }
+
+    if (!memberIDField.checkValidity()) {
+      memberIDField.setCustomValidity('يرجى إدخال رقم الهوية صحيح.');
+    } else {
+      memberIDField.setCustomValidity('');
+    }
+
+    if (!phoneNumberField.checkValidity()) {
+      phoneNumberField.setCustomValidity('يرجى إدخال رقم الهاتف صحيح.');
+    } else {
+      phoneNumberField.setCustomValidity('');
+    }
+
+    if (!currentCareerField.checkValidity()) {
+      currentCareerField.setCustomValidity('يرجى إدخال المهنة صحيحة.');
+    } else {
+      currentCareerField.setCustomValidity('');
+    }
+
+    if (!careerAddressField.checkValidity()) {
+      careerAddressField.setCustomValidity('يرجى إدخال مكان العمل صحيح.');
+    } else {
+      careerAddressField.setCustomValidity('');
+    }
+
+    if (!membershipDateField.checkValidity()) {
+      membershipDateField.setCustomValidity('يرجى إدخال تاريخ الانضمام للعضوية صحيح.');
+    } else {
+      membershipDateField.setCustomValidity('');
+    }
+  });
+
+  function validateGraduationYear(input) {
+    const currentYear = new Date().getFullYear();
+    if (parseInt(input.value) > currentYear) {
+      document.getElementById('graduationYearError').innerText = 'يجب أن تكون سنة التخرج أقل من أو تساوي السنة الحالية';
+    } else {
+      document.getElementById('graduationYearError').innerText = '';
+    }
+  }
     
   </script>
 
@@ -827,7 +1025,7 @@ function saveEditedInvoice() {
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class=""> </span>
         </button>
-
+        <div id="wrapper" style="margin-right:-12%; border-radius: 5px;">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav  ">
             <li class="nav-item active">
@@ -848,11 +1046,6 @@ function saveEditedInvoice() {
             <li class="nav-item" id="logout-btn">
               <button class="logout-btn" id="logoutButton" onclick="logout()">Logout</button>
             </li>
-            <form class="form-inline">
-              <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-            </form>
           </ul>
         </div>
       </nav>
@@ -868,9 +1061,12 @@ function saveEditedInvoice() {
       صفحة المحاسبة لجمعية حلحول التعاونية للتعليم العالي</h1>
     <br>
 
-    <div id="wrapper" style="margin-right:-12%; border-radius: 5px;">
-      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-        
+    <div id="wrapper" style="margin-right:-12%; border-radius: 5px; 
+    
+    " >
+      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style=" box-shadow: 0px 2px 5px rgb(0, 0, 0); ">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center">
+
         <hr class="sidebar-divider">
         <div class="sidebar-heading"> الطلبات والخدمات</div>
 
@@ -917,6 +1113,10 @@ function saveEditedInvoice() {
               الاشتراكات</span></a>
         </li>
         <li class="nav-item">
+          <a class="nav-link nav-link-mr" href="#section25" onclick="toggleSection('section25')"><span>فواتير
+              القروض</span></a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link nav-link-mr" href="#section8" onclick="toggleSection('section8')"><span>فواتير
               المصاريف</span></a>
         </li>
@@ -935,15 +1135,19 @@ function saveEditedInvoice() {
               الاشتراكات</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-link-mr" href="#section" onclick="toggleSection('section8')"><span> قائمة
+          <a class="nav-link nav-link-mr" href="#section26" onclick="toggleSection('section26')"><span>قائمة فواتير
+              القروض</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-mr" href="#section22" onclick="toggleSection('section22')"><span> قائمة
               فواتيرالمصاريف </span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-link-mr" href="#section" onclick="toggleSection('section9')"><span> قائمة فواتير
+          <a class="nav-link nav-link-mr" href="#section23" onclick="toggleSection('section23')"><span> قائمة فواتير
               المقبوضات</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-link-mr" href="#section" onclick="toggleSection('section10')"><span>فواتير اصول
+          <a class="nav-link nav-link-mr" href="#section24" onclick="toggleSection('section24')"><span>قائمة فواتير اصول
               ثابتة</span></a>
 </li>
 
@@ -992,8 +1196,9 @@ function saveEditedInvoice() {
           <a class="nav-link nav-link-mr" href="#section20"
             onclick="toggleSection('section20')"><span>المساعدة</span></a>
         </li>
-        <div class="wave">
-          <div id="section1" class="">
+      </ul>
+      
+          <div id="section1" class="section">
             <a href="#"><button class="close">x</button></a>
             <h2> المدير والمحاسب</h2>  
             <form id="managerForm" action="/empolyeeForm" method="POST">
@@ -1008,373 +1213,248 @@ function saveEditedInvoice() {
           
               <button type="submit">حفظ</button>
             </form>
-          
-            <table id="managerTable" action="/get_empolyeeForm" method="get">
+            <div id="preview">
+            </div>
+          </div>
+        <!--   <table id="managerTable" action="/get_empolyeeForm" method="get">
               <thead>
                 <tr> 
                   <th>العمليات</th>
                   <th>الوظيفة</th>
                    <th>البريد الإلكتروني</th>
                   <th>اسم المدير</th>
-             
                 </tr>
               </thead>
               
               <tbody>
               
               </tbody>
-            </table>
-          </div>
+            </table>--> 
+
+
+
          
+         <div id="section2" class="section">
+            <a href="#"><button class="close">x</button></a>
+            <h2>الأعضاء</h2>
+            <div class="row">
+              <div class="col-9">
+               <form autocomplete="off" accept-charset="UTF-8" action="/search" method="GET">
+                 <div class="form-group">
+                   <label for="member_name"><span style="color:red;">*</span> اسم العضو</label>
+                   <input class="form-control" autofocus="autofocus" required="قم بإدخال الاسم الكامل" placeholder="اسم العضو"
+                     type="text" name="member_name" id="member_name" style="direction: rtl;">
+                 </div>
+                 <div class="form-group">
+                   <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+                     data-disable-with="استرجاع" style="background-color: rgb(6, 77, 77);">
+                     <span style="color:red;">*</span> استرجاع
+                   </button>
+                 </div>
+               </form> 
+               
+               <form autocomplete="off" accept-charset="UTF-8" action="/searchallmembers" method="GET">
+                <div class="form-group">
+                  <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+                    data-disable-with="استرجاع" style="background-color: rgb(6, 77, 77);">
+                    <span style="color:red;">*</span>  استرجاع جميع الأعضاء
+                  </button>
+                </div>
+              </form>   
+             </div>
+         </div>
+            
+         </div>
 
 
 
           <div id="section3" class="section">
-            <h2>طلاب</h2>
-            <button class="add-button" onclick="addStudent()">إضافة طالب جديد</button>
-            <table id="studentTable">
-              <tr>
-                <th>الرقم</th>
-                <th>اسم الطالب</th>
-                <th>الجامعة</th>
-                <th>التخصص</th>
-                <th>المعدل التراكمي</th>
-                <th>المستوى الجامعي</th>
-                <th>القسط الفصلي</th>
-                <th>ملاحظات</th>
-                <th>العمليات</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>طالب 1</td>
-                <td>الجامعة الأولى</td>
-                <td>علوم الحاسوب</td>
-                <td>3.5</td>
-                <td>المستوى الثالث</td>
-                <td>5000</td>
-                <td></td>
-                <td><button class="delete-button" onclick="deleteRow(this)">حذف</button></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td></td>
-                <td> </td>
-                <td></td>
-                <td></td>
-                <td><button class="delete-button" onclick="deleteRow(this)">حذف</button></td>
-              </tr>
-              <!-- Add more rows as needed -->
-            </table>
+            <a href="#"><button class="close">x</button></a>
+            <h2>إضافة طالب </h2>
+            <form id="studentForm1" action="/studentForm1"  autocomplete="on" accept-charset="UTF-8" method="POST">
+
+              <label for="student_name">اسم الطالب </label>
+              <input type="text" id="student_name" name="student_name" required pattern="[أ-ي\s]+">
+              <label for="member_name">اسم العضو الكفيل </label>
+              <input type="text" id="member_name" name="member_name" required pattern="[أ-ي\s]+">
+              
+              <label for="PhoneNumber">رقم الهاتف</label>
+              <input type="number" id="PhoneNumber" name="PhoneNumber"required pattern="[0-9]{8,15}">
+
+              <label for="student_univ">الجامعة</label>
+              <input type="text" id="student_name_univ" name="student_univ" required pattern="[أ-ي\s]+">
+
+              <label for="student_speci">التخصص</label>
+              <input type="text" id="student_speci" name="student_speci"required pattern="[أ-ي\s]+">
+          
+              <label for="CumulativeAverage">المعدل التراكمي</label>
+              <input type="number" id="CumulativeAverage" name="CumulativeAverage" required step="0.01" min="0" max="4">
+          
+              <label for="AcademicLevel">المستوى الجامعي</label>
+              <select id="AcademicLevel" name="AcademicLevel" required>
+              <option value="">اختر المستوى الجامعي</option>
+              <option value="Undergraduate">طالب</option>
+               <option value="Postgraduate">خريج</option>
+                </select>
+          
+              <label for="UniversityTuition">القسط الفصلي </label>
+              <input type="number" id="UniversityTuition" name="UniversityTuition" required inputmode="numeric" min="1" max="9999999999">
+
+              <label for="note">ملاحظات</label>
+              <input type="text" id="note" name="note">  
+              
+              <button type="submit">حفظ</button>
+            </form>
+         
+            <div class="row">
+              <div class="col-9">
+               <form autocomplete="off" accept-charset="UTF-8" action="/searchstudent" method="GET">
+                 <div class="form-group">
+                   <label for="student_name"><span style="color:red;">*</span> اسم الطالب</label>
+                   <input class="form-control" autofocus="autofocus" required="required" placeholder="اسم الطالب"
+                     type="text" name="student_name" id="student_name" style="direction: rtl;" required pattern="[أ-ي\s]+">
+                 </div>
+                 <div class="form-group">
+                   <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+                     data-disable-with="استرجاع" style="background-color: rgb(6, 77, 77);">
+                     <span style="color:red;">*</span> استرجاع
+                   </button>
+                 </div>
+ </form> 
+ <form autocomplete="off" accept-charset="UTF-8" action="/searchallstudents" method="GET">
+  <div class="form-group">
+    <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+      data-disable-with="استرجاع" style="background-color: rgb(6, 77, 77);">
+      <span style="color:red;">*</span>  استرجاع جميع الطلاب
+    </button>
+  </div>
+</form>     
+             </div>
+         </div>
           </div>
 
 
           <div id="section4" class="section">
             <div class="container container-fluid main-content-box">
-
               <h1 class="page-title"
                 style="font-family: Georgia, 'Times New Roman', Times, serif;color:rgb(6, 77, 77);">عضو جديد</h1>
                 <a href="#"><button class="close">x</button></a>
-              <form autocomplete="off" accept-charset="UTF-8" method="POST" id="dataForm1" action="/dataForm1"><input
-                  type="hidden" name="authenticity_token"
-                  value="h-4GCUjLHcfFMEkdxxYDspy5v6Y83g9-Ptlb9WYu2am_NU5bbkw87fLbjYObH9cJwIUgJN3m2w2l7Ago32HCMA"
-                  autocomplete="on">
+                <form autocomplete="on" accept-charset="UTF-8" method="POST" id="dataForm1" action="/dataForm1">
+                  <div class="form-group">
+                      <label for="member_name"><span style="color:red;">*</span>الاسم الكامل </label>
+                      <input style="text-align: right;"  placeholder="FullName" class="form-control"  type="text" name="member_name" id="member_name" autofocus="autofocus" required pattern="[أ-ي\s]+" title="يجب أن يحتوي الحقل على نص عربي فقط">
+                      <small id="dateHelp" class="form-text text-muted">يفضل أن يكون الإسم رباعياً</small>
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="member_Birthdate"> <span style="color:red;">*</span>تاريخ الولادة </label>
+                      <input class="form-control" placeholder="Birthdate" type="date" name="member_Birthdate" id="member_Birthdate" autofocus="autofocus" required="تاريخ الولادة يجب ألا يكون في المستقبل." min="1900-01-01" max="<%= todayDate %>" title="يجب ألا يكون تاريخ الولادة في المستقبل">
+                      <small id="dateHelp" class="form-text text-muted">تاريخ الولادة يجب ألا يكون في المستقبل.</small>
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="member_Birthaddress"> <span style="color:red;">*</span>مولود في</label>
+                      <input style="text-align: right;" class="form-control" placeholder="Birth Address" type="text" name="member_Birthaddress" id="member_Birthaddress" autofocus="autofocus" required="required" pattern="[أ-ي\s]+" title="يجب أن يحتوي الحقل على نص عربي فقط">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="member_address"><span style="color:red;">*</span> العنوان</label>
+                      <input  style="text-align: right;" class="form-control" placeholder="Adress" type="text" name="member_address" id="member_address"  autofocus="autofocus" required="required" pattern="[أ-ي\s]+" title="يجب أن يحتوي الحقل على نص عربي فقط">
+                  </div>
 
-                <div class="form-group">
-                  <label for="membership_id"><span style="color:red;">*</span> رقم العضوية</label>
-                  <input class="form-control" autofocus="autofocus" required="required" placeholder="Membership ID"
-                    type="number" name="membership_id" id="membership_id">
-                </div>
-
-                <div class="form-group">
-                  <label for="member_name"><span style="color:red;">*</span>الاسم الرباعي </label>
-                  <input placeholder="FullName" class="form-control" type="text" name="member_name" id="member_name">
-                </div>
-                <div class="form-group">
-                  <label for="member_Birthdate"> <span style="color:red;">*</span>تاريخ الولادة </label>
-                  <input class="form-control" placeholder="Birthdate" type="date" name="member_Birthdate"
-                    id="member_Birthdate">
-                </div>
-
-                <div class="form-group">
-                  <label for="member_Birthaddress"> <span style="color:red;">*</span>مولود في</label>
-                  <input class="form-control" placeholder="Birth Address" type="text" name="member_Birthaddress"
-                    id="member_Birthaddress">
-                </div>
-
-                <div class="form-group">
-                  <label for="member_address"><span style="color:red;">*</span> العنوان</label>
-                  <input class="form-control" placeholder="Adress" type="text" name="member_address"
-                    id="member_address">
-                </div>
-
-
-                <div class="form-group">
-                  <label for="member_Qualification"><span style="color:red;">*</span>المؤهل العلمي</label>
-                  <input class="form-control" placeholder=" Qualification " type="text" name="member_Qualification"
-                    id="member_Qualification">
-                </div>
-
-                <div class="form-group">
-                  <label for="member_CollegeName"> <span style="color:red;">*</span>اسم المعهدأوالجامعة</label>
-                  <input class="form-control" placeholder=" CollegeName" type="text" name="member_CollegeName"
-                    id="member_CollegeName">
-                </div>
-
-                <div class="form-group">
-                  <label for="member_CollegeYear"> <span style="color:red;">*</span>سنةالتخرج</label>
-                  <input class="form-control" placeholder="CollegeYear " type="number" name="member_CollegeYear"
-                    id="member_CollegeYear">
-                </div>
-
-
-                <div class="form-group">
-                  <label for="member_Specialization"> <span style="color:red;">*</span>التخصص</label>
-                  <input class="form-control" placeholder="Specialization" type="text" name="member_Specialization"
-                    id="member_Specialization">
-                </div>
-
-                <div class="form-group">
-                  <label for="member_Nationality"> <span style="color:red;">*</span>الجنسية</label>
-                  <input class="form-control" placeholder=" Nationality" type="text" name="member_Nationality"
-                    id="member_Nationality">
-                </div>
-
-
-                <div class="form-group">
-                  <label for="member_MemberID"> <span style="color:red;">*</span>رقم الهوية </label>
-                  <input class="form-control" placeholder=" MemberID" type="number" name="member_MemberID"
-                    id="member_MemberID">
-                </div>
-
-                <div class="form-group">
-                  <label for="MaterialStatus"> <span style="color:red;">*</span>الحالةالاجتماعية</label>
-                  <select id="MaterialStatus" name="MaterialStatus" required=" ">
-                    <option value="Married">متزوج/ة</option>
-                    <option value="Single">أعزب/عزباء</option>
-                    <option value="Divorced">مطلق/ة </option>
-                    <option value="Widowed">غير ذلك</option>
-                  </select>
-
-                </div>
-
-                <div class="form-group">
-                  <label for="Gender" name="Gender" id="Gender"> <span style="color:red;">*</span>الجنس</label>
-                  <label><input type="radio" id="Male" name="options" value="option1">ذكر</label>
-                  <label><input type="radio" id="Female" name="options" value="option2">أنثى</label>
-                </div>
-
-                <div class="form-group">
-                  <label for="member_phone"> <span style="color:red;">*</span>رقم الهاتف</label>
-                  <input class="form-control" placeholder="phoneNumber " type="number" name="member_phone"
-                    id="member_phone">
-                </div>
-
-
-                <div class="form-group">
-                  <label for="CurrentCareer"> <span style="color:red;">*</span>المهنة</label>
-                  <input class="form-control" placeholder="CurrentCareer" type="text" id="CurrentCareer"
-                    name="CurrentCareer" required=" ">
-                </div>
-
-                <div class="form-group">
-                  <label for="CareerAddress"> <span style="color:red;">*</span>مكان العمل</label>
-                  <input class="form-control" placeholder="CareerAddress" type="text" id="CareerAddress"
-                    name="CareerAddress" required=" ">
-
-                </div>
-
-                <div class="form-group">
-                  <label for="MembershipDate"> <span style="color:red;">*</span>تاريخ الانضمام للعضوية</label>
-                  <input class="form-control" placeholder="MembershipDate" type="date" id="MembershipDate"
-                    name="MembershipDate" required=" ">
-
-                </div>
-
-                <div class="form-group">
-                  <input type="checkbox" value="1" name="is_active" id="memberis_active">
-                  <label for="memberis_active">نشط</label>
-                </div>
-
-                <div class="actions float-right">
-                  <input type="submit" name="commit" value="حفظ" class="btn btn-primary btn-sm btn-block"
-                    data-disable-with="حفظ" style="background-color: rgb(6, 77, 77);">
+                    <div class="form-group">
+                      <select id="member_Qualification" name="member_Qualification" required="required">
+                          <option value="Married">دبلوم</option>
+                          <option value="Single">بكالوريوس</option>
+                          <option value="Divorced">ماجستير</option>
+                          <option value="Widowed">دكتوراه</option>
+                      </select>
+                      <label for="member_Qualification"> <span style="color:red;">*</span>المؤهل العلمي</label>
+                  </div>
+                  <div class="form-group">
+                      <label for="member_CollegeName"> <span style="color:red;">*</span>اسم المعهد/الجامعة</label>
+                      <input style="text-align: right;" class="form-control" placeholder=" CollegeName" type="text" name="member_CollegeName" id="member_CollegeName" style="direction: rtl;" autofocus="autofocus" required="required" pattern="[أ-ي\s]+" title="يجب أن يحتوي الحقل على نص عربي فقط">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="member_CollegeYear"> <span style="color:red;">*</span>سنةالتخرج</label>
+                      <input style="text-align: right;" class="form-control" placeholder="CollegeYear " type="number" name="member_CollegeYear" id="member_CollegeYear"  autofocus="autofocus" required="required" min="1900" max="<%= currentYear %>" title="يجب أن تكون سنة التخرج أكبر من 1900 و أقل من السنة الحالية " onchange="validateGraduationYear(this)">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="member_Specialization"> <span style="color:red;">*</span>التخصص</label>
+                      <input style="text-align: right;" class="form-control" placeholder="Specialization" type="text" name="member_Specialization" id="member_Specialization" autofocus="autofocus" required="required"  pattern="[أ-ي\s]+" title="يجب أن يحتوي الحقل على نص عربي فقط">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="member_Nationality"> <span style="color:red;">*</span>الجنسية</label>
+                      <input style="text-align: right;" class="form-control" placeholder=" Nationality" type="text" name="member_Nationality" id="member_Nationality"  autofocus="autofocus" required="required" pattern="[أ-ي\s]+" title="يجب أن يحتوي الحقل على نص عربي فقط">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="member_MemberID"> <span style="color:red;">*</span>رقم الهوية </label>
+                      <input style="text-align: right;" class="form-control" placeholder=" MemberID" type="number" name="member_MemberID" id="member_MemberID"  required pattern="[0-8]{9}" title="يجب أن يكون رقم الهوية مكوناً من 9 أرقام ">
+                  </div>
+                  
+                  <div class="form-group">
+                      <select id="MaterialStatus" name="MaterialStatus" autofocus="autofocus" required="required">
+                          <option value="Married">متزوج/ة</option>
+                          <option value="Single">أعزب/عزباء</option>
+                          <option value="Divorced">مطلق/ة </option>
+                          <option value="Widowed">غير ذلك</option>
+                      </select>
+                      <label for="MaterialStatus"> <span style="color:red;">*</span>الحالةالاجتماعية</label>
+                  </div>
+                  
+                  <div class="form-group">
+                      <label><input type="radio" id="Male" name="Gender" value="Male" >ذكر</label>
+                      <label><input type="radio" id="Female" name="Gender" value="Female">أنثى</label> 
+                      <label for="Gender"> <span style="color:red;">*</span>الجنس</label>
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="PhoneNumber"> <span style="color:red;">*</span>رقم الهاتف</label>
+                      <input style="text-align: right;" class="form-control" placeholder="PhoneNumber " type="number" name="PhoneNumber" id="PhoneNumber"  autofocus="autofocus" required="required" pattern="[0-9]{10}" title="يجب أن يكون رقم الهاتف مكوناً من 10 أرقام">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="CurrentCareer"> <span style="color:red;">*</span>المهنة</label>
+                      <input style="text-align: right;" class="form-control" placeholder="CurrentCareer" type="text" id="CurrentCareer" name="CurrentCareer" required pattern="[أ-ي\s]+" title="يجب أن يحتوي الحقل على نص عربي فقط">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="CareerAddress"> <span style="color:red;">*</span>مكان العمل</label>
+                      <input style="text-align: right;" style="text-align: right;" class="form-control" placeholder="CareerAddress" type="text" id="CareerAddress" name="CareerAddress" required pattern="[أ-ي\s]+" title="يجب أن يحتوي الحقل على نص عربي فقط">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="MembershipDate"> <span style="color:red;">*</span>تاريخ الانضمام للعضوية</label>
+                      <input class="form-control" placeholder="MembershipDate" type="date" id="MembershipDate" name="MembershipDate" autofocus="autofocus" required="required" min="<%= todayDate %>" max="<%= todayDate %>">
+                      <small id="dateHelp" class="form-text text-muted">تاريخ الانضمام للعضوية يجب ألا يكون في المستقبل.</small>
+                  </div>
+                  
+                  <div class="form-group">
+                      <input type="checkbox" value="1" name="is_active" id="memberis_active">
+                      <label for="memberis_active">نشط</label>
+                  </div>
+                  
+                  <div class="actions float-right">
+                      <button type="submit" style="background-color: #083942; color: #fff; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">حفظ</button>   
+                  </div>
                   <span style="color:red;">*</span> <span class="small"> يجب تعبئة المعلومات</span>
               </form>
-
-
-            </div>
-          </div>
-        </div>
-
-        <div id="section2" class="section">
-
-          <div class="container container-fluid main-content-box">
-
-
-            <div class="row">
-              <div class="col-9">
-                <a href="#"><button class="close">x</button></a>
-                <h1>الأعضاء
-                </h1>
-              </div>
-              <div class="col-3">
-                <a class="btn btn-primary btn-sm float-right mt-2" target="blank"
-                  href="/customers/print_my_customers">طباعة</a>
-              </div>
-            </div>
-            <div class="make-space"></div>
-
-            <form class="customer_search" id="customer_search" action="/customers/my_customers" accept-charset="UTF-8"
-              method="get">
-              <div class="form-row">
-                <div class="form-group col-5">
-                  <input placeholder="اسم الزبون" class="form-control" autofocus="autofocus" type="text"
-                    name="q[name_or_customer_code_cont]" id="q_name_or_customer_code_cont">
-                </div>
-                <div class="col-1">
-                  <input type="submit" name="commit" value="بحث" class="btn btn-primary btn-sm mt-1"
-                    data-disable-with="بحث">
-                </div>
-              </div>
-            </form>
-
-
-            <table id="dataTable1">
-              <thead>
-                <tr>
-                  <th>رقم العضوية</th>
-                  <th>الاسم الرباعي</th>
-                  <th>تاريخ الولادة</th>
-                  <th>مكان الولادة</th>
-                  <th> العنوان</th>
-                  <th> المؤهل العلمي</th>
-                  <th>اسم المعهدأوالجامعة</th>
-                  <th>سنةالتخرج </th>
-                  <th>التخصص</th>
-                  <th>الجنسية</th>
-                  <th>رقم الهوية </th>
-                  <th>الحالةالاجتماعية</th>
-                  <th> الجنس</th>
-                  <th>رقم الهاتف</th>
-                  <th>المهنة</th>
-                  <th>مكان العمل</th>
-                  <th>تاريخ الانضمام للعضوية</th>
-                  <th> نشط</th>
-
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td><i class="fa fa-check-circle"></i></td>
-                </tr>
-              </tbody>
-            </table>
-
-
-          </div>
-
-
-          <!--
-
-            <h2>الأعضاء</h2>
-                  <button onclick="updateRow(this)" style="background-color: #007BFF;
-                  color: #fff;
-                  padding: 10px 20px;
-                  border: none;
-                  border-radius: 4px;
-                  cursor: pointer;">تعديل</button>
-                  <button onclick="deleteRow(this)" style="background-color: #007BFF;
-                  color: #fff;
-                  padding: 10px 20px;
-                  border: none;
-                  border-radius: 4px;
-                  cursor: pointer;">حذف</button>
-                  <button onclick="saveRow(this)" style="background-color: #007BFF;
-                  color: #fff;
-                  padding: 10px 20px;
-                  border: none;
-                  border-radius: 4px;
-                  cursor: pointer;">حفظ</button>
-            <table id="dataTable1">
-                <thead>
-                
-                    <tr>
-                      <th>رقم العضوية</th>
-                      <th>الاسم الرباعي</th>
-                      <th>تاريخ الولادة</th>
-                      <th>مكان الولادة</th>
-                      <th> العنوان</th>
-                      <th> المؤهل العلمي</th>
-                      <th>اسم المعهدأوالجامعة</th>
-                      <th>سنةالتخرج </th>
-                      <th>التخصص</th>
-                      <th>الجنسية</th>
-                      <th>رقم الهوية  </th> 
-                      <th>الحالةالاجتماعية</th> 
-                      <th> الجنس</th> 
-                      <th>رقم الهاتف</th>
-                      <th>المهنة</th>
-                      <th>مكان العمل</th>
-                      <th>تاريخ الانضمام للعضوية</th>
-                      <th> نشط</th>
-                      
-                      
-                    </tr>
-                    <td>مدير 1</td>
-                <td>مدير التسويق</td>
-                <td>manager1@example.com</td>
-                <td><button class="delete-button" onclick="deleteRow(this)">حذف</button></td>
-                  </thead>
-                  <tbody id="dataBody1"></tbody>
-          
               
-            </table>-->
-          <!--
-            <form>
-              <h3>إضافة عضو جديد</h3>
-              <label for="manager_name">اسم المدير:</label>
-              <input type="text" id="manager_name" name="manager_name" required>
+                   
+              </div>
+          </div>
 
-              <label for="job_title">الوظيفة:</label>
-              <input type="text" id="job_title" name="job_title" required>
-
-              <label for="email">البريد الإلكتروني:</label>
-              <input type="email" id="email" name="email" required>
-              <button class="add-button" onclick="document.location='section4'" style=" background-color:#3672f4;
-                color: white;
-                padding: 10px 20px;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;">إضافة عضو جديد</button>
-            </form>
--->
-        </div>
+         
 
         <div id="section6" class="section">
+          <div class="container container-fluid main-content-box">
           <a href="#"><button class="close">x</button></a>
           <h2 style="color: #007BFF;">فاتورة الاشتراكات</h2>
-          <form action="/process_invoice" style="margin-top: 20px;" method="post" id="invoiceForm">
+          <form action="/process_invoice" style="margin-top: 20px;" method="post" id="invoiceForm" autocomplete="on">
             <label style="display: block; margin-bottom: 8px; font-weight: bold;" for="member_id">رقم العضو</label>
             <input type="text" style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;"
               name="member_id" id="member_id" required>
@@ -1406,44 +1486,91 @@ function saveEditedInvoice() {
               type="submit" >إنشاء فاتورة</button>
           </form>
         </div>
+        </div>
 
         <div id="section21" class="section" >
+          <div class="container container-fluid main-content-box">
           <a href="#"><button class="close">x</button></a>
-          <h2>قائمة فواتير الاشتراك</h2>
-          <table border="1" style="width: 100%;" action="/invoise" >
-            <thead>
-              <tr>
-                <th>رقم الفاتورة</th>
-                <th>رقم العضو</th>
-                <th>المبلغ</th>
-                <th>التاريخ</th>
-                <th>تاريخ الاستحقاق</th>
-                <th>الحالة</th>
-              </tr>
-            </thead>
+          <form action="/searchinvoice" id="searchpayment" method="get">
+            <div class="form-group">
+              <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+                data-disable-with="استرجاع" style="background-color: rgb(6, 77, 77);">
+                <span style="color:red;">*</span>  استرجاع جميع فواتير الإشتراكات
+              </button>
+            </div>
+          </form>
+          </div>
+        </div>
 
-            <tbody id="invoiceTableBody"></tbody>
-          </table>
+        <div id="section25" class="section">
+          <div class="container container-fluid main-content-box">
+          <a href="#"><button class="close">x</button></a>
+          <h2 style="color: #007BFF;">فاتورة القروض</h2>
+          <form action="/loan_invoice" style="margin-top: 20px;" method="post" id="invoiceForm" autocomplete="on">
+            <label style="display: block; margin-bottom: 8px; font-weight: bold;" for="member_id">رقم العضو</label>
+            <input type="text" style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;"
+              name="member_id" id="member_id" required>
+              <label style="display: block; margin-bottom: 8px; font-weight: bold;" for="student_id">رقم الطالب </label>
+              <input type="text" style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;"
+                name="student_id" id="student_id" required>
 
+            <label for="amount" style="display: block; margin-bottom: 8px; font-weight: bold;"
+              for="amount" >المبلغ</label>
+            <input type="text" style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;"
+              name="amount" id="amount" max="500" required>
+
+            <label for="start_date" style="display: block; margin-bottom: 8px; font-weight: bold;"
+              for="start_date">التاريخ</label>
+            <input type="date" style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;"
+              name="start_date" id="start_date" required>
+
+            <label for="end_date" style="display: block; margin-bottom: 8px; font-weight: bold;" for="end_date">تاريخ
+              الاستحقاق</label>
+            <input type="date" style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;"
+              name="end_date" id="end_date" required>
+
+            <label for="status" style="display: block; margin-bottom: 8px; font-weight: bold;">الحالة</label>
+            <select name="status" id="status"
+              style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;" required>
+              <option value="paid"> تم الدفع </option>
+              <option value="overdue"> تأخر في الدفع</option>
+            </select>
+
+            <button
+              style="background-color: #007BFF; color: #fff; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;"
+              type="submit" >إنشاء فاتورة</button>
+          </form>
+        </div>
+        </div>
+
+        <div id="section26" class="section" >
+          <div class="container container-fluid main-content-box">
+          <a href="#"><button class="close">x</button></a>
+          <form action="/searchloan-inv" id="searchpayment" method="get">
+            <div class="form-group">
+              <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+                data-disable-with="استرجاع" style="background-color: rgb(6, 77, 77);">
+                <span style="color:red;">*</span>  استرجاع جميع فواتير القروض
+              </button>
+            </div>
+          </form>
+          </div>
         </div>
 
 
-
-
-
-
         <div id="section7" class="section" style="margin-top: 20px;">
+          <div class="container container-fluid main-content-box">
           <a href="#"><button class="close">x</button></a>
           <h2>إدارة المساعدات</h2>
-          <form action="/process_aid" method="post" id="process_aid">
-            <label style="display: block; margin-bottom: 8px; font-weight: bold;" for="student_id">رقم الطالب</label>
+          <form action="/process_aid" method="post" id="process_aid" autocomplete="on">
+            <label style="display: block; margin-bottom: 8px; font-weight: bold;" for="student_name">اسم الطالب</label>
             <input style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;direction: rtl;" type="text"
-              name="student_id" id="student_id" required>
+              name="student_name" id="student_name" required>
 
-            <label style="display: block; margin-bottom: 8px; font-weight: bold;" for="member_id">رقم العضو
+            <label style="display: block; margin-bottom: 8px; font-weight: bold;" for="member_name">اسم العضو
               (الراعي)</label>
             <input style="width: 100%; padding: 8px; margin-bottom: 16px; box-sizing: border-box;direction: rtl;" type="text"
-              name="member_id" id="member_id" required>
+              name="member_name" id="member_name" required>
 
             <label style="display: block; margin-bottom: 8px; font-weight: bold;" for="type">نوع المساعدة (منحةأو معاونة
               مالية)</label>
@@ -1462,36 +1589,19 @@ function saveEditedInvoice() {
               type="submit">إضافة مساعدة</button>
           </form>
         </div>
-
+        </div>
 
 
 
 
         <!-- Expense Invoices Section -->
-        <div class="container">
+      
+          
           <div id="section8" class="section">
+            <div class="container container-fluid main-content-box">
             <a href="#"><button class="close">x</button></a>
             <h3>فواتير المصروفات</h3>
-            <p>قائمة بفواتير المصروفات الشهرية والمصاريف العامة.</p>
-            <table id="expense-invoices-table" class="table table-bordered">
-              <thead>
-                <tr>
-                  <th>الاسم</th>
-                  <th>المبلغ</th>
-                  <th>التاريخ</th>
-                  <th>الحالة</th>
-                  <th>ملاحظات</th>
-                  <th>التعديل</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- هنا ستظهر البيانات -->
-              </tbody>
-            </table>
-      
-            <form id="newInvoiceForm" action="/newInvoiceForm" method="post">
-              <a href="#"><button class="close">x</button></a>
-              <h3> فاتورة جديدة</h3>
+            <form id="newInvoiceForm" action="/newInvoiceForm" method="post" autocomplete="on">
               <label for="invoice_name">الاسم</label>
               <input type="text" id="invoice_name" name="invoice_name" required>
               <label for="amount">المبلغ</label>
@@ -1508,98 +1618,161 @@ function saveEditedInvoice() {
       
               <button type="submit" class="btn btn-primary">إضافة فاتورة</button>
             </form>
+
+            <div id="section22" class="section" >
+              <div class="container container-fluid main-content-box">
+              <a href="#"><button class="close">x</button></a>
+              <form action="/searchexpenses" id="searchpayment" method="get" >
+                <div class="form-group">
+                  <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+                    data-disable-with="استرجاع" style="background-color: rgb(6, 77, 77);">
+                    <span style="color:red;">*</span>  استرجاع جميع فواتير المصروفات
+                  </button>
+                </div>
+              </form>
+              </div>
+            </div>
           </div>
         </div>
        
+      
 
 
         <!-- Receivable Invoices Section -->
         <div id="section9" class="section">
-          <a href="#"><button class="close">x</button></a>
-          <h3>فواتير القبض</h3>
-          <p>تتبع هنا فواتير القبض والتحصيل.</p>
-          <button id="add-receivable-invoice-btn">إضافة فواتير القبض</button>
-          <table id="receivable-invoices-table">
-            <thead>
-              <tr>
-                <th>الاسم</th>
-                <th>المبلغ</th>
-                <th>التاريخ</th>
-                <th>الحالة</th>
-                <th>التعديل</th>
-              </tr>
-              <tr>
-                <td>فواتير القبض الاول</td>
-                <td>$100</td>
-                <td>2023-03-01</td>
-                <td>مدفوع</td>
-                <td><button>تعديل</button></td>
-              </tr>
-            </thead>
-          </table>
+          <div class="container container-fluid main-content-box">
+         
+          <div id="wrapper" style="margin-right:-12%; border-radius: 5px;"> 
+            <a href="#"><button class="close">x</button></a>
+              <h3>فواتير القبض</h3>
+            <form id="payment-form" action="/add-payment" method="post" autocomplete="on">
+              <label for="payment-date">تاريخ الدفعة</label>
+              <input type="date" id="payment-date" name="payment_date" required>
+          
+              <label for="amount">المبلغ</label>
+              <input type="number" step="0.01" id="amount" name="amount" required>
+          
+              <label for="currency">العملة</label>
+              <select id="currency" name="currency" required>
+                <option value="USD">دولار أمريكي</option> 
+                <option value="JOD">دبنار أردني</option>
+              </select>
+          
+              <label for="description">وصف</label>
+              <textarea id="description" name="description"></textarea>
+          
+              <label for="payment-method">طريقة الدفع</label>
+              <input type="text" id="payment-method" name="payment_method" required>
+          
+              <label for="notes">ملاحظات</label>
+              <textarea id="notes" name="notes"></textarea>
+          
+              <label for="money-box-id">صندوق المال</label>
+              <select id="money-box-id" name="money\_box\_id" required>
+                <option value="1">صندوق البنك</option>
+                <option value="2">صندوق الجمعية</option>
+          
+              </select>
+          
+              <button type="submit">إضافة دفعة</button>
+            </form>
+          </div>
         </div>
 
-
+<div id="section23" class="section">
+  <div class="container container-fluid main-content-box">
+  <form action="/searchpayment" id="searchpayment" method="get">
+    <div class="form-group">
+      <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+        data-disable-with="استرجاع" style="background-color: rgb(6, 77, 77);">
+        <span style="color:red;">*</span>  استرجاع جميع فواتير المقبوضات
+      </button>
+    </div>
+  </form>
+  </div>
+</div>
+        </div>
+    </div>
+  </div>
+  
+ 
 
 
         <!-- Fixed Asset Invoices Section -->
         <div id="section10" class="section">
+          <div class="container container-fluid main-content-box">
           <a href="#"><button class="close">x</button></a>
           <h3>فواتير الأصول الثابتة</h3>
-          <p>قائمة بفواتير شراء الأصول الثابتة.</p>
-          <button id="add-fixed-asset-invoice-btn">إضافة فواتير الأصول الثابتة</button>
-          <table id="fixed-asset-invoices-table">
-            <thead>
-              <tr>
-                <th>الاسم</th>
-                <th>المبلغ</th>
-                <th>التاريخ</th>
-                <th>الحالة</th>
-                <th>التعديل</th>
-              </tr>
-              <tr>
-                <td>فواتير الأصول الثابتة الاول</td>
-                <td>$50</td>
-                <td>2023-03-01</td>
-                <td>مدفوع</td>
-                <td><button>تعديل</button></td>
-              </tr>
-            </thead>
-          </table>
+<form action="/submit_fixed_asset_invoice" method="POST" id="fixed_asset_invoice" autocomplete="on">
+    <label for="asset_type">نوع الأصل</label>
+    <input type="text" id="asset_type" name="asset_type" style="direction: rtl;" required>
+    
+    <label for="asset_amount">قيمة الأصل</label>
+    <input type="number" id="asset_amount" name="asset_amount" style="direction: rtl;" required>
+    
+    <label for="creation_date">تاريخ الإنشاء</label>
+    <input type="date" id="creation_date" name="creation_date" style="direction: rtl;" required>
+    
+    <label for="due_date">تاريخ الاستحقاق</label>
+    <input type="date" id="due_date" name="due_date" style="direction: rtl;">
+    
+    <label for="asset_status">حالة الأصل</label>
+    <select id="asset_status" name="asset_status" required>
+        <option value="مدفوع">مدفوع</option>
+        <option value="غير مدفوع">غير مدفوع</option>
+        <option value="مدفوع جزئيًا">مدفوع جزئيًا</option>
+    </select>
+    
+    <label for="asset_details">تفاصيل الأصل</label>
+    <textarea id="asset_details" name="asset_details" style="direction: rtl;"></textarea>
+    
+    <label for="notes">ملاحظات</label>
+    <textarea id="notes" name="notes" style="direction: rtl;"></textarea>
+    
+    <button type="submit">تقديم الفاتورة</button>
+</form>
+<div id="section24" class="section">
+  <div class="container container-fluid main-content-box">
+  <form action="/searchasset" id="searchpayment" method="get">
+    <div class="form-group">
+      <button type="submit" name="commit" value="Retrieve" class="btn btn-primary btn-sm btn-block"
+        data-disable-with="استرجاع" style="background-color: rgb(6, 77, 77);">
+        <span style="color:red;">*</span>  استرجاع جميع فواتير أصول ثابتة
+      </button>
+    </div>
+  </form>
+  </div>
+</div>
+
+        </div>
         </div>
 
-
-
-
+     
 
         <!-- List of Stocks Section -->
         <div id="section11" class="section">
+          <div class="container container-fluid main-content-box">
           <a href="#"><button class="close">x</button></a>
-          <h3>قائمة الأسهم</h3>
-          <p>عرض لقائمة الأسهم المتاحة والكميات.</p>
-          <button id="add-stock-btn">إضافة أسهم</button>
-          <table id="stock-table">
-            <thead>
-              <tr>
-                <th>الاسم</th>
-                <th>الكمية</th>
-                <th>التعديل</th>
-              </tr>
-              <tr>
-                <td>أسهم الاول</td>
-                <td>100</td>
-                <td><button>تعديل</button></td>
-              </tr>
-              <tr>
-                <td>أسهم الثاني</td>
-                <td>50</td>
-                <td><button>تعديل</button></td>
-              </tr>
-            </thead>
-          </table>
+          <h2>نموذج فاتورة الأسهم</h2>
+          <form action="/submit_stock" method="POST" id="stock_invoice"autocomplete="on">
+            <label for="membership_id">رقم العضوية</label>
+            <input type="text" id="membership_id" name="membership_id" required pattern="[0-9]+" title="يجب أن يحتوي على أرقام فقط">
+        
+            <label for="asset_amount">قيمة الأصل</label>
+            <input type="number" style="direction: rtl;" id="asset_amount" name="asset_amount" min="0" step="0.01" required>
+        
+            <label for="shares_owned">عدد الأسهم المملوكة</label>
+            <input type="number" style="direction: rtl;" id="shares_owned" name="shares_owned" min="0" required>
+        
+            <label for="purchase_date">تاريخ الشراء</label>
+            <input type="date" id="purchase_date" name="purchase_date" max="<?php echo date('Y-m-d'); ?>" required>
+        
+            <button type="submit">تقديم</button>
+        </form>
+        
 
         </div>
-
+        </div>
 
 
 
@@ -1607,10 +1780,10 @@ function saveEditedInvoice() {
 
         <!-- Financial Movements Section -->
         <div id="section12" class="section">
+          <div class="container container-fluid main-content-box">
           <a href="#"><button class="close">x</button></a>
           <div class="col-8">
-            <h1>الحركات المالية <a class="question-mark-link" href="/pages/documentation#payment_transactions"><i
-                  class="fa fa-question-circle"></i></a></h1>
+            <h1>الحركات المالية </h1>
 
             <div class="col-4 text-right">
               <a class="btn btn-primary btn-sm mt-2" href="/payments/transfer_money">تحويل بين الصناديق</a>
@@ -1756,7 +1929,7 @@ function saveEditedInvoice() {
           <div class="make-space"></div>
 
         </div>
-   
+        </div>
 
 
 
@@ -1766,7 +1939,7 @@ function saveEditedInvoice() {
 
     <!-- Capital Section -->
     <div id="section14" class="section">
-     
+      <div class="container container-fluid main-content-box">
       <h1>رأس مال جديد</h1>
  <a href="#"><button class="close">x</button></a>
       <form action="/investments" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="G9-sVgmKUh0LbjUMKhQhHX0EE2kc7PUN2UljCyXU5kspIM8T9V7gc0FgOO65yR260nVdg19ZqBO70hKIiDSUzA" autocomplete="off" />
@@ -1802,30 +1975,27 @@ function saveEditedInvoice() {
           <input type="submit" name="commit" value="حفظ" class="btn btn-primary btn-sm" data-disable-with="حفظ" />
         </div>
       </form>
-
+      </div>
 
     </div>
 
     <!-- Trial Balance Section -->
     <div id="section15" class="section">
-
+      <div class="container container-fluid main-content-box">
       <h1 class="page-title">
         ميزان المراجعة
-        <a class="question-mark-link" href="/pages/documentation#trial_balance"><i
-            class="fa fa-question-circle"></i></a>
       </h1>
-      <div class="make-space"></div>
       <a href="#"><button class="close">x</button></a>
       <form class="form-inline" action="/payments/trial_balance" accept-charset="UTF-8" method="get">
         من تاريخ:
-        <input type="date" name="date_from" id="date_from" value="2024-01-01" class="form-control mb-1" />
+        <input type="date" name="date_from" id="date_from" value="2023-01-01" class="form-control mb-1" />
         إلى تاريخ:
         <input type="date" name="date_to" id="date_to" value="2024-01-01" class="form-control mb-1" />
         <input type="submit" name="commit" value="عرض" class="btn btn-primary ml-2" data-disable-with="عرض" />
       </form>
       <div class="make-space"></div>
       <div class="alert alert-info">
-        من تاريخ: 2024-01-01 <br />
+        من تاريخ: 2023-01-01 <br />
         إلى تاريخ: 2024-01-01
       </div>
 
@@ -1861,23 +2031,7 @@ function saveEditedInvoice() {
         </tr>
 
         <tr>
-          <td>ذمم مدينة لنا عند الزبائن</td>
-          <td>0.0</td>
-          <td>0.0</td>
-          <td>/</td>
-          <td>0.0</td>
-        </tr>
-
-        <tr>
-          <td>مشتريات</td>
-          <td>0.0</td>
-          <td>0.0</td>
-          <td>/</td>
-          <td>0.0</td>
-        </tr>
-
-        <tr>
-          <td>مصاريف</td>
+          <td> قروض الاعضاء</td>
           <td>0.0</td>
           <td>0.0</td>
           <td>/</td>
@@ -1893,7 +2047,23 @@ function saveEditedInvoice() {
         </tr>
 
         <tr>
-          <td>ذمم دائنة علينا للموردين</td>
+          <td>ضيافة</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+        </tr>
+
+        <tr>
+          <td>صيانه </td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+        </tr>
+
+        <tr>
+          <td>إتصالات</td>
           <td>0.0</td>
           <td>/</td>
           <td>0.0</td>
@@ -1901,13 +2071,166 @@ function saveEditedInvoice() {
         </tr>
 
         <tr>
-          <td>مجموع المبيعات</td>
+          <td>قرطاسية</td>
           <td>0.0</td>
           <td>/</td>
           <td>0.0</td>
           <td>(0.0)</td>
         </tr>
 
+        <tr>
+          <td>الرواتب</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+
+        <tr>
+          <td>مساعدات للطلاب المحتاجين</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+        <tr>
+          <td>تكريم</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+        <tr>
+          <td>العمولة البنكية</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+        <tr>
+          <td>الإستهلاك الحالي</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+        <tr>
+          <td>رسوم هيئة العمل التعاوني المستحق</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+        <tr>
+          <td>منظفات</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+        <tr>
+          <td> رسوم تدقيق </td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+
+        <tr>
+          <td>رسوم هيئة العمل التعاوني</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+        <tr>
+          <td> رسوم تدقيق مستحقة</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+        <tr>
+          <td>تبرعات مدارس</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+
+        <tr>
+          <td> احتياطي الإستهلاك</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+        <tr>
+          <td>الإحتياطي القانوني </td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+        <tr>
+          <td>مخصص لتنمية المجتمع المحلي %5</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+        <tr>
+          <td> 5% لصندوق التنمية التعاوني </td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+        <tr>
+          <td> مخصص لصندوق الطلاب</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+
+        <tr>
+          <td> مخصص  المدارس</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+
+        <tr>
+          <td>رسوم انتساب</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+        <tr>
+          <td>الأسهم</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+
+        <tr>
+          <td>الإشتراكات</td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
+        <tr>
+          <td>رسوم خدمات </td>
+          <td>0.0</td>
+          <td>/</td>
+          <td>0.0</td>
+          <td>(0.0)</td>
+        </tr>
         <tr>
           <td>رأس المال</td>
           <td>0.0</td>
@@ -1926,12 +2249,13 @@ function saveEditedInvoice() {
       </table>
 
     </div>
-
+    </div>
 
 
 
     <!-- Gross Profit Section -->
     <div id="section16" class="section">
+      <div class="container container-fluid main-content-box"><
       <h3>الربح الإجمالي</h3>
       <a href="#"><button class="close">x</button></a>
       <p>معلومات حول الربح الإجمالي والعوائد.</p>
@@ -1954,13 +2278,12 @@ function saveEditedInvoice() {
           </tr>
         </thead>
       </table>
-
-
+      </div>
     </div>
 
     <!-- Profits and Losses Section -->
     <div id="section17" class="section">
-      
+      <div class="container container-fluid main-content-box">
       <h3>الأرباح والخسائر</h3>
       <a href="#"><button class="close">x</button></a>
       <p>تقرير حول الأرباح والخسائر الشهرية.</p>
@@ -1984,8 +2307,9 @@ function saveEditedInvoice() {
         </thead>
       </table>
     </div>
-
+    </div>
 <div id="section18" class="section">
+  <div class="container container-fluid main-content-box">
     <h1>كشف سندات صرف مساعدات ومنح الطلاب</h1>
     <table border="1">
       <thead>
@@ -2001,7 +2325,21 @@ function saveEditedInvoice() {
       <tbody id="data-table"></tbody>
     </table>
   </div>
-    <script>
+</div>
+</div>
+</div>
+
+    </div>
+    </div>
+  
+  </div>
+</div>
+
+
+    <section class="footer">
+      <div class="copy">© 2023 HCAHA. All rights reserved.</div>
+    </section>
+ <script>
       // استرجاع البيانات باستخدام JavaScript
       fetch('http://localhost:3000/server/')
         .then(response => response.json())
@@ -2021,14 +2359,34 @@ function saveEditedInvoice() {
           });
         })
         .catch(error => console.error('Error fetching data:', error));
+
+        // Get the phone number input element
+const phoneNumberInput = document.getElementById('PhoneNumber');
+
+// Add event listener for input validation
+phoneNumberInput.addEventListener('input', function(event) {
+  const phoneNumber = event.target.value;
+
+  // Remove any non-numeric characters from the input
+  const cleanedPhoneNumber = phoneNumber.replace(/\D/g, '');
+
+  // Update the input field with the cleaned phone number
+  event.target.value = cleanedPhoneNumber;
+
+  // Check if the cleaned phone number has 10 digits
+  if (cleanedPhoneNumber.length !== 10) {
+    event.target.setCustomValidity('رقم الهاتف يجب أن يكون مكونًا من 10 أرقام.');
+  } else {
+    event.target.setCustomValidity('');
+  }
+});
+
+
+
+
+
+
     </script>
-
- </div>
-
-    <section class="footer">
-      <div class="copy">© 2023 HCAHA. All rights reserved.</div>
-    </section>
-
     <script src="/public/js/adminpage.js"></script>
 </body>
 
